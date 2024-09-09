@@ -1,37 +1,29 @@
 import React from "react";
-import Headers from "./components/Headers";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Services from "./components/Services";
-import Commitment from "./components/Commitment";
-import Policy from "./components/Policy";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Chat from "./components/Chat";
+import Home from "./pages/home";
+import About from "./pages/about";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/common/header";
+import Footer from "./components/common/footer";
+import SoxImplementation from "./pages/sox-implementation";
+import Industries from "./pages/industries";
 
 const App = () => {
   return (
     <div>
       <ToastContainer />
-      <div className="page_wrapper">
-        <Headers />
-        <main className="page_content" id="home">
-          <Hero />
-          <div id="about" className="py-5"></div>
-          <About />
-          <Services />
-          <Commitment />
-          <Policy />
-          <div className="py-5" id="port"></div>
-          <Portfolio />
-          <Contact />
-        </main>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/sox-implementation" element={<SoxImplementation />} />
+          <Route path="/industries" element={<Industries />} />
+        </Routes>
+        <hr />
         <Footer />
-        <Chat/>
-      </div>
+      </BrowserRouter>
     </div>
   );
 };
