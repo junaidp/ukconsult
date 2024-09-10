@@ -155,12 +155,6 @@ const Industry = () => {
                     </p>
                     <div className="py-4"></div>
                   </div>
-                  <div className="col-lg-5 text-end">
-                    <img
-                      src="assets/images/categories-image-manufacturing.png"
-                      className="img-fluid"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -188,12 +182,6 @@ const Industry = () => {
                       streamline operations and mitigate risks.
                     </p>
                     <div className="py-4"></div>
-                  </div>
-                  <div className="col-lg-5 text-end">
-                    <img
-                      src="assets/images/categories-image-manufacturing.png"
-                      className="img-fluid"
-                    />
                   </div>
                 </div>
               </div>
@@ -223,12 +211,6 @@ const Industry = () => {
                     </p>
                     <div className="py-4"></div>
                   </div>
-                  <div className="col-lg-5 text-end">
-                    <img
-                      src="assets/images/categories-image-manufacturing.png"
-                      className="img-fluid"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -256,12 +238,6 @@ const Industry = () => {
                       streamline operations and mitigate risks.
                     </p>
                     <div className="py-4"></div>
-                  </div>
-                  <div className="col-lg-5 text-end">
-                    <img
-                      src="assets/images/categories-image-manufacturing.png"
-                      className="img-fluid"
-                    />
                   </div>
                 </div>
               </div>
@@ -291,12 +267,6 @@ const Industry = () => {
                     </p>
                     <div className="py-4"></div>
                   </div>
-                  <div className="col-lg-5 text-end">
-                    <img
-                      src="assets/images/categories-image-manufacturing.png"
-                      className="img-fluid"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -325,12 +295,6 @@ const Industry = () => {
                     </p>
                     <div className="py-4"></div>
                   </div>
-                  <div className="col-lg-5 text-end">
-                    <img
-                      src="assets/images/categories-image-manufacturing.png"
-                      className="img-fluid"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -358,12 +322,6 @@ const Industry = () => {
                       streamline operations and mitigate risks.
                     </p>
                     <div className="py-4"></div>
-                  </div>
-                  <div className="col-lg-5 text-end">
-                    <img
-                      src="assets/images/categories-image-manufacturing.png"
-                      className="img-fluid"
-                    />
                   </div>
                 </div>
               </div>

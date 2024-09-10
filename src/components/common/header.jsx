@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SmallScreenSidebar from "./small-screen-sidebar";
 
 const Header = () => {
+  const [showSidebar, setShowSidebar] = React.useState(false);
   return (
     <div>
+      <SmallScreenSidebar
+        setShowSidebar={setShowSidebar}
+        showSidebar={showSidebar}
+      />
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            <img src="assets/images/Logo.png" style={{ width: "180px" }} />
+            <img src="assets/images/Logo.png" className="w-180" />
           </Link>
           <button
             className="navbar-toggler"
@@ -17,6 +23,7 @@ const Header = () => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={() => setShowSidebar(true)}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
