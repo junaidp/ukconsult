@@ -11,7 +11,7 @@ import Industries from "./pages/industries";
 
 const App = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <ToastContainer />
       <BrowserRouter>
         <Header />

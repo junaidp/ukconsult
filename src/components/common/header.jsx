@@ -5,12 +5,12 @@ import SmallScreenSidebar from "./small-screen-sidebar";
 const Header = () => {
   const [showSidebar, setShowSidebar] = React.useState(false);
   return (
-    <div>
-      <SmallScreenSidebar
-        setShowSidebar={setShowSidebar}
-        showSidebar={showSidebar}
-      />
-      <nav className="navbar navbar-expand-lg">
+    <>
+      <nav className="navbar top-bar navbar-expand-lg">
+        <SmallScreenSidebar
+          setShowSidebar={setShowSidebar}
+          showSidebar={showSidebar}
+        />
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img src="assets/images/Logo.png" className="w-180" />
@@ -56,7 +56,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

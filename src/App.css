@@ -23,11 +23,6 @@
   line-height: 38px;
 }
 
-.py-30 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 .w-180 {
   width: 180px;
 }
@@ -40,9 +35,8 @@
   list-style: none;
 }
 
-.px-100 {
-  padding-left: 100px;
-  padding-right: 100px;
+.sox-hero {
+  padding: 30px 10px;
 }
 
 .error {
@@ -170,8 +164,26 @@
   border-radius: 50%;
 }
 
+.overflow-x-hiddden {
+  overflow-x: hidden !important;
+}
+
+.top-bar {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 10 !important;
+  margin: 0px !important;
+}
+
 @media screen and (max-width: 800px) {
   .col-8 {
     flex: 4;
+  }
+  .sox-hero {
+    padding: 0px;
+  }
+  .main-heading {
+    font-size: 2.8rem;
   }
 }

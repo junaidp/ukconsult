@@ -135,7 +135,7 @@ const Industry = () => {
               id="newHomeTabPane"
               role="tabpanel"
               aria-labelledby="newHomeTab"
-              tabindex="0"
+              tabIndex="0"
             >
               <div className="bg-black">
                 <div className="row p-5 justify-content-between">
@@ -163,7 +163,7 @@ const Industry = () => {
               id="newProfileTabPane"
               role="tabpanel"
               aria-labelledby="newProfileTab"
-              tabindex="0"
+              tabIndex="0"
             >
               <div className="bg-black">
                 <div className="row p-5 justify-content-between">
@@ -191,7 +191,7 @@ const Industry = () => {
               id="newContactTabPane"
               role="tabpanel"
               aria-labelledby="newContactTab"
-              tabindex="0"
+              tabIndex="0"
             >
               <div className="bg-black">
                 <div className="row p-5 justify-content-between">
@@ -219,7 +219,7 @@ const Industry = () => {
               id="newDisabledTabPane"
               role="tabpanel"
               aria-labelledby="newDisabledTab"
-              tabindex="0"
+              tabIndex="0"
             >
               <div className="bg-black">
                 <div className="row p-5 justify-content-between">
@@ -247,7 +247,7 @@ const Industry = () => {
               id="healthcare-tab-pane"
               role="tabpanel"
               aria-labelledby="healthcare-tab"
-              tabindex="0"
+              tabIndex="0"
             >
               <div className="bg-black">
                 <div className="row p-5 justify-content-between">
@@ -275,7 +275,7 @@ const Industry = () => {
               id="real-estate-tab-pane"
               role="tabpanel"
               aria-labelledby="real-estate-tab"
-              tabindex="0"
+              tabIndex="0"
             >
               <div className="bg-black">
                 <div className="row p-5 justify-content-between">
@@ -303,7 +303,7 @@ const Industry = () => {
               id="basic-materials-tab-pane"
               role="tabpanel"
               aria-labelledby="basic-materials-tab"
-              tabindex="0"
+              tabIndex="0"
             >
               <div className="bg-black">
                 <div className="row p-5 justify-content-between">
@@ -331,7 +331,7 @@ const Industry = () => {
               id="technology-tab-pane"
               role="tabpanel"
               aria-labelledby="technology-tab"
-              tabindex="0"
+              tabIndex="0"
             >
               ...
             </div>

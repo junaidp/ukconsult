@@ -1,9 +1,11 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import emailjs from "emailjs-com";
 
 const Hero = () => {
-  // Formik setup
+  const [isLoading, setIsLoading] = React.useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -20,23 +22,37 @@ const Hero = () => {
       message: Yup.string().required("Message is required"),
     }),
     onSubmit: (values, { resetForm }) => {
-      console.log("Form values:", values);
-
-      // Simulate email sending logic (or API call)
-      alert(
-        `Thank you ${values.name}, your message has been submitted! We will contact you at ${values.email}.`
-      );
-
-      // Reset the form after submission
-      resetForm();
+      if (isLoading) return;
+      setIsLoading(true);
+      emailjs
+        .send(
+          "service_ijyrlcy",
+          "template_3za67cj",
+          values,
+          "Y-d1kMGQ-xCp-FA22"
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            resetForm();
+            toast.success("Message sent successfully!");
+          },
+          (err) => {
+            console.log("FAILED...", err);
+            toast.error("Failed to send message. Please try again later.");
+          }
+        )
+        .finally(() => {
+          setIsLoading(false);
+        });
     },
   });
 
   return (
     <div>
-      <header className="sox-header bg-light">
-        <div className="position-relative">
-          <div className="py-30 px-100">
+      <section className="py-5 pb-0 bg-light">
+        <div className="container">
+          <div className="sox-hero">
             <div className="row">
               <div className="col-lg-6">
                 <h1 className="fw-bold text-black sox-heading">
@@ -183,7 +199,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </header>
+      </section>
     </div>
   );
 };

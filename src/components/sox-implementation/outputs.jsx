@@ -7,7 +7,7 @@ const Outputs = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h3 Outputs className="border-left-theme ps-3">
+              <h3  className="border-left-theme ps-3">
                 Key Outputs
               </h3>
             </div>
