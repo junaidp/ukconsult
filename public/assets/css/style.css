@@ -175,9 +175,13 @@ a {
 }
 
 .approach-card {
-  background-color: #f47920;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000;
 }
+.border-text{
+  border-bottom: 2px solid #f47920;
+}
+
 
 .leader-title {
   position: relative;

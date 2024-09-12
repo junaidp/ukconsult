@@ -3,18 +3,18 @@ import React from "react";
 const Approach = () => {
   return (
     <div>
-      <section className="py-5">
+      <section className="py-5 mt-5">
         <div className="container-fluid px-lg-4">
           <div className="row">
             <div className="col-12 text-center">
-              <h2>Our Approach</h2>
+              <h2 >Our Approach</h2>
               <p className="px-lg-5">A Structured Path to SOX Compliance</p>
             </div>
           </div>
           <div className="row mt-4 justify-content-center">
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-5 h-100">
-                <h3 className="text-white">Plan</h3>
+              <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
+                <h3 className="text-black border-text">Plan</h3>
                 <p>
                   We start by forming a Project Steering Committee, mapping
                   business processes with financial statements, and finalizing
@@ -24,8 +24,8 @@ const Approach = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-5 h-100">
-                <h3 className="text-white">Assess As Is</h3>
+              <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
+                <h3 className="text-black border-text">Assess As Is</h3>
                 <p>
                   We document current business processes, map objectives, risks,
                   and controls, assign control ownership, and identify any
@@ -34,8 +34,8 @@ const Approach = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-5 h-100">
-                <h3 className="text-white">Bridge the Gap</h3>
+              <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
+                <h3 className="text-black border-text">Bridge the Gap</h3>
                 <p>
                   We recommend additional controls to address gaps, communicate
                   with stakeholders, and present solutions to the Project
@@ -44,8 +44,8 @@ const Approach = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-5 h-100">
-                <h3 className="text-white">Implement</h3>
+              <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
+                <h3 className="text-black border-text">Implement</h3>
                 <p>
                   Detailed action steps are established, performance is
                   monitored, and implementation effectiveness is assessed.
@@ -53,8 +53,8 @@ const Approach = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-5 h-100">
-                <h3 className="text-white">Test</h3>
+              <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
+                <h3 className="text-black border-text">Test</h3>
                 <p>
                   We recommend additional controls to address gaps, communicate
                   with stakeholders, and present solutions to the Project

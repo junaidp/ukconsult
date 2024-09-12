@@ -10,9 +10,20 @@
   border: none;
   text-decoration: none !important;
 }
-
+.leader-card{
+  height: 950px;
+}
+.logo-footer{
+  width: 200px;
+}
 .d-flex {
   display: flex;
+}
+.footer-text{
+  font-size: 14px;
+}
+.address-box{
+  border-left: 2px solid #f47920;
 }
 
 .justify-center {
