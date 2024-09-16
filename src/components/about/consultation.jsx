@@ -7,10 +7,9 @@ const Consultation = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h2>"Former Big 4 Consultants, Now on Your Team"</h2>
-              <p className="px-lg-5">
-                Bringing world-className consulting from the Big 4 to your
-                doorstep—without the Big 4 price tag.
+              <h2 className="fw-bold">"Former Big 4 Consultants, Now on Your Team"</h2>
+              <p className="px-lg-5 text-secondary">
+              Bringing world-class consulting from the Big 4 to your doorstep—without the Big 4 price tag.
               </p>
               <div className="mt-4">
                 <button

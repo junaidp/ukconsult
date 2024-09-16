@@ -9,13 +9,13 @@ const Blogs = () => {
             <div className="col-12 d-flex justify-content-center">
               <span className="blog">Blog</span>
             </div>
-            <h2 className="mt-4">Insights & Thought Leadership</h2>
-            <p className="px-lg-5">
+            <h1 className="mt-4 main-heading">Insights & Thought Leadership</h1>
+            <p className="px-lg-5 fs-20 text-secondary">
               Stay informed with expert articles, industry updates, and in-depth
               analysis on SOX compliance and risk management.
             </p>
           </div>
-          <div className="row mt-5">
+          <div className="row mt-5 font-inter">
             <div className="col-lg-4">
               <div>
                 <img

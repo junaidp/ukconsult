@@ -139,13 +139,13 @@ const Industry = () => {
             >
               <div className="bg-black">
                 <div className="row p-5 justify-content-between">
-                  <div className="col-lg-6 ms-lg-5 text-white mt-4">
-                    <h2 className="fs-1 fw-bold text-white">
+                  <div className="col-lg-6 ps-lg-5 text-white mt-4">
+                    <h2 className="fs-1 fw-bold text-white main-heading">
                       Manufacturing Industry
                     </h2>
-                    <h4 className="my-3 text-white">
+                    <h3 className="my-3 text-white">
                       Optimizing Operations and Compliance in Manufacturing
-                    </h4>
+                    </h3>
                     <p className="lh-38">
                       Manufacturing companies face unique challenges in
                       maintaining compliance and optimizing processes. Our
@@ -155,6 +155,9 @@ const Industry = () => {
                     </p>
                     <div className="py-4"></div>
                   </div>
+                    <div className="col-lg-6 text-end text-lg-center">
+                      <img src="assets/images/categories-image-manufacturing.png" alt="image" className="img-fluid" />
+                    </div>
                 </div>
               </div>
             </div>

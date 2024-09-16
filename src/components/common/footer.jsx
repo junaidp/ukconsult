@@ -13,7 +13,7 @@ const Footer = () => {
                       src="assets/images/logo-ver.png" className={"logo-footer"}
                   />
                 </a>
-                <p >
+                <p className="text-secondary">
                   Hyphen is an award-winning Uk based, dynamic advisory firm offering services that are flexible and scalable to meet the specific needs of our clients of all sizes and industries. Committed to providing real solutions that offer practical and efficient improvements to processes, procedures and operations.
                 </p>
 

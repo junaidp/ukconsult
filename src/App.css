@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Cabin&family=PT+Sans&family=Quicksand&family=Roboto:wght@300;400&family=Tilt+Neon&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Cabin&family=PT+Sans&family=Quicksand&family=Roboto:wght@300;400&family=Tilt+Neon&display=swap"); */
 
 * {
-  font-family: "Tilt Neon", sans-serif !important;
+  /* font-family: "Tilt Neon", sans-serif !important; */
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;

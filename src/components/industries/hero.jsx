@@ -12,12 +12,12 @@ const Hero = () => {
           </div>
           <div className="col-lg-5 header-2">
             <div className="mt-lg-5">
-              <h2 className="border-left-theme ps-3">Industries We Serve</h2>
+              <h2 className="border-left-theme ps-3 fw-bold">Industries We Serve</h2>
               <div className="mt-5">
                 <h1 className="main-heading">
                   Expert Solutions Tailored to Your Industry's Needs
                 </h1>
-                <h3>
+                <h3 className="fw-600">
                   Industry-Specific Expertise for Robust Financial Control
                 </h3>
               </div>

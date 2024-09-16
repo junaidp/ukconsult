@@ -7,8 +7,8 @@ const Checklist = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <h3 className="border-left-theme-2 ps-3">SOX Compliance Checklist</h3>
-              <p className="text-secondary mt-4">
+              <h2 className="border-left-theme-2 ps-3 py-1">SOX Compliance Checklist</h2>
+              <p className="text-secondary mt-4 fs-20">
                 We've been working with SOX compliance since the beginning. We
                 know how challenging it can be to plan and achieve SOX
                 readiness. That's why we've prepared a straightforward checklist

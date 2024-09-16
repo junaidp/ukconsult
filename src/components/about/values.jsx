@@ -7,7 +7,7 @@ const Values = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <h2 className="border-left-theme ps-3">Our Values</h2>
+              <h2 className="border-left-theme ps-3 fw-bold fs-42">Our Values</h2>
             </div>
           </div>
           <div className="row mt-4">

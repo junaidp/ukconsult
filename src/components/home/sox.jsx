@@ -7,8 +7,8 @@ const SOX = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h2>Partner with Hyphen to simplify SOX compliance</h2>
-              <p className="px-lg-5">
+              <h2 className="fw-bold fs-42">Partner with Hyphen to simplify SOX compliance</h2>
+              <p className="px-lg-5 text-secondary fs-20">
                 Enhance the efficiency, accuracy and security of your SOX
                 program.
               </p>

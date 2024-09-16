@@ -3,11 +3,11 @@ import React from "react";
 const AI = () => {
   return (
     <div>
-      <section className="py-5">
+      <section className="py-5 font-inter">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <h1>
+              <h1 className="main-heading">
                 Implementation through <br />{" "}
                 <span className="text-theme">Artificial Intelligence</span>
               </h1>
@@ -23,7 +23,7 @@ const AI = () => {
               <p className="fw-bold fs-4">
                 AI-Driven Implementation for Budget-Conscious Organizations
               </p>
-              <p className="fs-5 text-secondary">
+              <p className="fs-4 text-secondary">
                 Suitable for mid-tier organizations with some internal control
                 knowledge and limited budgets, this model leverages the power of
                 AI for efficient implementation.

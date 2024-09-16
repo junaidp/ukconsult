@@ -7,10 +7,10 @@ const Leadership = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <h4 className="border-left-theme ps-3">Our Leadership</h4>
-              <h2 className="main-heading my-4">
+              <h4 class="border-left-theme ps-3 fw-bold">Our Leadership</h4>
+              <h1 className="main-heading my-4">
                 Elite Leadership, Industry Veterans
-              </h2>
+              </h1>
             </div>
           </div>
           <div className="col-12">
@@ -21,8 +21,8 @@ const Leadership = () => {
                     src="assets/images/leader-1.png"
                     className="img-fluid w-100"
                   />
-                  <div className="p-3">
-                    <h4 className="fw-bold">Faheem Piracha</h4>
+                  <div className="p-3 font-inter">
+                    <h3 className="fw-bold">Faheem Piracha</h3>
                     <p className="text-secondary leader-title">
                       CEO & Principal Consultant
                     </p>
@@ -98,8 +98,8 @@ const Leadership = () => {
                     src="assets/images/leader-2.png"
                     className="img-fluid w-100"
                   />
-                  <div className="p-3">
-                    <h4 className="fw-bold">Leah Owens</h4>
+                  <div className="p-3 font-inter">
+                    <h3 className="fw-bold">Leah Owens</h3>
                     <p className="text-secondary leader-title">
                       Partner - AML & Compliance Specialist
                     </p>

@@ -63,10 +63,10 @@ const Newsletter = () => {
                   className="img-fluid"
                   alt=""
                 />
-                <h3 className="text-white fw-bold m-0 ms-3">
+                <h2 className="text-white fw-bold m-0 ms-3">
                   Sign up for our weekly round-up and get the insights you need
                   to stay on top.
-                </h3>
+                </h2>
               </div>
             </div>
             <div className="col-lg-5">
@@ -77,7 +77,7 @@ const Newsletter = () => {
               >
                 {({ isSubmitting }) => (
                   <Form className="d-flex">
-                    <div className="me-3">
+                    <div className="me-3 w-75">
                       <Field
                         type="email"
                         name="email"
@@ -92,7 +92,7 @@ const Newsletter = () => {
                     </div>
                     <button
                       type="submit"
-                      className="btn btn-white"
+                      className="btn btn-white px-4"
                       disabled={isLoading || isSubmitting}
                     >
                       {isLoading ? "Loading..." : "Subscribe"}
@@ -109,8 +109,8 @@ const Newsletter = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center">
-                <h2>Ready to Ensure SOX Compliance?</h2>
-                <p className="px-lg-5">
+                <h2 className="fw-bold">Ready to Ensure SOX Compliance?</h2>
+                <p className="px-lg-5 fs-20">
                   Take the first step towards robust internal controls and secure
                   financial reporting.
                 </p>
@@ -133,13 +133,12 @@ const Newsletter = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <h4 className="border-left-theme ps-3">Reach out to us</h4>
-              <h2 className="main-heading my-4">
+              <h4 class="border-left-theme ps-3 fw-bold">Reach out to us</h4>
+              <h1 className="main-heading my-4">
                 Contact Us Today For A Free Consultation
-              </h2>
-              <p className="text-secondary mt-4">
-                Our team of experts is here to guide you through every step of
-                your SOX compliance journey.
+              </h1>
+              <p className="text-secondary mt-4 fs-20">
+              Our team of experts is here to guide you through every step of your SOX compliance journey. Reach out to us for a no-obligation consultation and see how we can help your business achieve compliance efficiently and effectively.
               </p>
             </div>
             <div className="col-lg-6">

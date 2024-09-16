@@ -7,16 +7,16 @@ const Implementation = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h1 className="text-theme fw-bold">Full Implementation</h1>
-              <p className="px-lg-5 fs-4">End-to-End Implementation and Support</p>
-              <p className="px-lg-5 text-secondary">
+              <h1 className="text-theme fw-bold main-heading">Full Implementation</h1>
+              <h3 className="px-lg-5 fs-4">End-to-End Implementation and Support</h3>
+              <p className="px-lg-5 text-secondary fs-20">
                 Ideal for large and complex organizations with fully utilized
                 finance teams, our Full Implementation route offers
                 comprehensive coverage from start to finish.
               </p>
             </div>
           </div>
-          <div className="row mt-4 justify-content-center">
+          <div className="row mt-4 justify-content-center font-inter">
             <div className="col-lg-3 col-md-6 mb-3">
               <div className="approach-card pb-3 px-3 pt-4 h-100">
                 <p>

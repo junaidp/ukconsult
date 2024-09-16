@@ -7,12 +7,10 @@ const Outputs = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h3  className="border-left-theme ps-3">
-                Key Outputs
-              </h3>
+              <h4 class="border-left-theme ps-3 fw-bold">Key Outputs</h4>
             </div>
           </div>
-          <div className="row mt-3">
+          <div className="row mt-3 font-inter">
             <div className="col b-2">
               <div className="output p-2 h-100">
                 Scoping & Risk Assessment Document

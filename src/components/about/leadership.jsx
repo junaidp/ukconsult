@@ -7,16 +7,16 @@ const Leadership = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <h4 className="border-left-theme ps-3">Our Leadership</h4>
-              <h2 className="main-heading my-4">
+              <h4 class="border-left-theme ps-3 fw-bold">Our Leadership</h4>
+              <h1 className="main-heading my-4">
                 Elite Leadership, Industry Veterans
-              </h2>
+              </h1>
             </div>
           </div>
-          <div className="col-12 mt-4">
+          <div className="col-12 mt-4 font-inter">
             <div className="row">
               <div className="col-lg-12 mb-3">
-                <div className="border leader-card bg-white">
+                <div className="border bg-white">
                   <div className="row">
                     <div className="col-md-5">
                       <img
@@ -76,7 +76,7 @@ const Leadership = () => {
                 </div>
               </div>
               <div className="col-lg-12 mb-3">
-                <div className="border leader-card bg-white">
+                <div className="border bg-white">
                   <div className="row">
                     <div className="col-md-5">
                       <img

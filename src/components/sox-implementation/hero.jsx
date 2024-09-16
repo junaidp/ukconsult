@@ -50,24 +50,22 @@ const Hero = () => {
 
   return (
     <div>
-      <section className="py-5 pb-0 bg-light">
+      <section className="py-5 pb-0 bg-light sox-header">
         <div className="container">
           <div className="sox-hero">
             <div className="row">
               <div className="col-lg-6">
-                <h1 className="fw-bold text-black sox-heading">
+                <h1 className="fw-bold text-black sox-heading main-heading text-white">
                   SOX Implementation <br />
                   <span className="text-theme">Routes</span>
                 </h1>
-                <h3 className="my-3 text-black">
+                <h3 className="my-3 text-black text-white">
                   Tailored Solutions for Every Business Need
                 </h3>
-                <p className="pe-lg-5 fs-5 text-black lh-22">
-                  At Hyphen, we offer three distinct routes to help your
-                  organization achieve seamless SOX compliance, tailored to your
-                  specific needs.
-                </p>
-                <ul className="mt-4 text-black ls-none">
+                <h4 className="pe-lg-5 fs-5 text-black lh-22 text-white fs-24">
+                At Hyphen, we offer three distinct routes to help your organization achieve seamless SOX compliance, tailored to your specific needs.
+                </h4>
+                <ul className="mt-4 text-black ls-none text-white">
                   <li>
                     <p>
                       <span className="me-2">

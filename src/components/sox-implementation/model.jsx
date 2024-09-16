@@ -12,21 +12,21 @@ const Model = () => {
           </div>
           <div className="row mt-4">
             <div className="col-lg-6">
-              <h1 className="fw-bold mb-2">Hybrid Model</h1>
-              <p className="text-theme fs-4">
+              <h1 className="fw-bold mb-2 main-heading">Hybrid Model</h1>
+              <h3 className="text-theme fw-bold">
                 Flexible Support for Mid-Tier Organizations
-              </p>
-              <p className="mt-4">
+              </h3>
+              <h4 className="mt-4">
                 This route is designed for mid-tier organizations with limited
                 budgets but sufficient finance bandwidth to dedicate time to
                 project implementation.
-              </p>
+              </h4>
               <div className="d-flex mt-4">
                 <span className="me-2">
                   <img src="assets/images/list-check.png" alt="list-check" />
                 </span>
                 <p>
-                  <span className="text-theme fw-bold">
+                  <span className="text-theme fw-bolder">
                     Process flows and Risk Control Matrixes
                   </span>
                   <br />
@@ -40,7 +40,7 @@ const Model = () => {
                   <img src="assets/images/list-check.png" alt="list-check" />
                 </span>
                 <p>
-                  <span className="text-theme fw-bold">Consultation</span>{" "}
+                  <span className="text-theme fw-bolder">Consultation</span>{" "}
                   <br />
                   We will offer hourly consultant engagement to provide expert
                   advice and review throughout the implementation process.
