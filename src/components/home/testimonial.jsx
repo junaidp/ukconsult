@@ -35,7 +35,11 @@ const Testimonial = () => {
                         am glad that it was worth taking.
                       </p>
                       <div className="mt-4">
-                        <img src="assets/images/stars.png" />
+                        <img src="assets/images/star.svg" />
+                        <img src="assets/images/star.svg" />
+                        <img src="assets/images/star.svg" />
+                        <img src="assets/images/star.svg" />
+                        <img src="assets/images/star.svg" />
                       </div>
                     </div>
                   </div>

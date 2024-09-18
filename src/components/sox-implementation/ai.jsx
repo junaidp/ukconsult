@@ -44,10 +44,10 @@ const AI = () => {
                   <img src="assets/images/list-check.png" alt="list-check" />
                 </span>
                 <p>
-                  <span className="text-theme fw-bold">In-House AI Model</span>{" "}
+                  <span className="text-theme fw-bold">Team</span>
                   <br />
-                  Gain access to our in-house AI Model, which will generate
-                  process flows and Risk Control Matrixes based on user input.
+                  Engage our team on an hourly basis for second-level reviews to
+                  ensure accuracy and compliance.
                 </p>
               </div>
             </div>

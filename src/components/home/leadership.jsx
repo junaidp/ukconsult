@@ -3,7 +3,7 @@ import React from "react";
 const Leadership = () => {
   return (
     <div>
-      <section className="py-5 bg-light"  >
+      <section className="py-5 bg-light">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -16,7 +16,7 @@ const Leadership = () => {
           <div className="col-12">
             <div className="row">
               <div className="col-lg-6">
-                <div className="border leader-card" >
+                <div className="border leader-card">
                   <img
                     src="assets/images/leader-1.png"
                     className="img-fluid w-100"

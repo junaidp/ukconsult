@@ -5,16 +5,18 @@ import Quote from "../components/about/quote";
 import Leadership from "../components/about/leadership";
 import Consultation from "../components/about/consultation";
 import Newsletter from "../components/common/newsletter";
+import Header from "../components/common/header";
 
 const About = () => {
   return (
     <div>
+      <Header />
       <Hero />
       <Values />
       <Quote />
       <Leadership />
       <Consultation />
-      <Newsletter />
+      <Newsletter newsletter={false} />
     </div>
   );
 };

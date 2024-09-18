@@ -14,7 +14,9 @@ const Approach = () => {
           <div className="row mt-4 justify-content-center">
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
               <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
-                <h2 className="text-black fw-bold"><span className="border-text">Plan</span></h2>
+                <h2 className="text-black fw-bold ">
+                  <span className="border-text underline">Plan</span>
+                </h2>
                 <p>
                   We start by forming a Project Steering Committee, mapping
                   business processes with financial statements, and finalizing
@@ -25,7 +27,9 @@ const Approach = () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
               <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
-                <h2 className="text-black fw-bold"><span className="border-text">Assess As Is</span></h2>
+                <h2 className="text-black fw-bold">
+                  <span className="border-text underline">Assess As Is</span>
+                </h2>
                 <p>
                   We document current business processes, map objectives, risks,
                   and controls, assign control ownership, and identify any
@@ -35,7 +39,9 @@ const Approach = () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
               <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
-                <h2 className="text-black fw-bold"><span className="border-text">Bridge the Gap</span></h2>
+                <h2 className="text-black fw-bold">
+                  <span className="border-text underline">Bridge the Gap</span>
+                </h2>
                 <p>
                   We recommend additional controls to address gaps, communicate
                   with stakeholders, and present solutions to the Project
@@ -45,7 +51,9 @@ const Approach = () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
               <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
-                <h2 className="text-black fw-bold"><span className="border-text">Implement</span></h2>
+                <h2 className="text-black fw-bold">
+                  <span className="border-text underline">Implement</span>
+                </h2>
                 <p>
                   Detailed action steps are established, performance is
                   monitored, and implementation effectiveness is assessed.
@@ -54,7 +62,9 @@ const Approach = () => {
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
               <div className="approach-card pb-3 px-3 pt-5 h-100 shadow">
-                <h2 className="text-black fw-bold"><span className="border-text">Test</span></h2>
+                <h2 className="text-black fw-bold">
+                  <span className="border-text underline">Test</span>
+                </h2>
                 <p>
                   We recommend additional controls to address gaps, communicate
                   with stakeholders, and present solutions to the Project

@@ -1,18 +1,18 @@
 import React from "react";
 import Hero from "../components/industries/hero";
 import Industry from "../components/industries/industry";
-import Trending from "../components/industries/trending";
 import Contact from "../components/common/contact";
 import NewsLetter from "../components/common/newsletter";
+import Header from "../components/common/header";
 
 const Industries = () => {
   return (
     <div>
+      <Header />
       <Hero />
       <Industry />
-      <Trending />
       <Contact />
-      <NewsLetter />
+      <NewsLetter newsletter={true} />
     </div>
   );
 };

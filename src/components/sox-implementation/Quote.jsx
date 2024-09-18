@@ -3,7 +3,7 @@ import React from "react";
 const Quote = () => {
   return (
     <div>
-      <section className="py-4">
+      <section>
         <div className="container-fluid p-0">
           <img src="assets/images/divider.png" className="img-fluid w-100" />
         </div>

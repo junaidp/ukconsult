@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +10,7 @@
 body {
   color: #333333;
   transition: all 0.5s;
-  font-family: "Lato", sans-serif!important;
+  font-family: "Lato", sans-serif !important;
 }
 
 h1,
@@ -30,6 +30,10 @@ a {
   position: relative;
   top: 20%;
   left: 16px;
+}
+
+.output-header {
+  margin-left: -23px;
 }
 
 .text-primary {
@@ -181,10 +185,9 @@ a {
   background-color: #ffffff;
   color: #000;
 }
-.border-text{
+.border-text {
   border-bottom: 2px solid #f47920;
 }
-
 
 .leader-title {
   position: relative;
@@ -204,12 +207,6 @@ a {
   text-decoration: none;
   color: inherit;
   font-weight: 600;
-}
-
-.leader-card:hover {
-  box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.24);
-  -webkit-box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.24);
-  -moz-box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.24);
 }
 
 .blog {
@@ -281,7 +278,7 @@ footer ul li a:hover {
   box-shadow: 0px 88px 187px 0px rgba(21, 21, 21, 0.15);
   -webkit-box-shadow: 0px 88px 187px 0px rgba(21, 21, 21, 0.15);
   -moz-box-shadow: 0px 88px 187px 0px rgba(21, 21, 21, 0.15);
-  min-height: 500px;
+  min-height: 600px;
   position: relative;
 }
 
@@ -375,38 +372,37 @@ footer ul li a:hover {
   }
 
   .header-2 {
-    margin-left: -100px;
+    margin-left: -60px;
   }
 }
 
-
-.fs-20{
+.fs-20 {
   font-size: 20px;
 }
 
-.font-inter{
-  font-family: "Inter", sans-serif!important;
+.font-inter {
+  font-family: "Inter", sans-serif !important;
 }
 
-button.nav-link{
+button.nav-link {
   font-size: 19.2px;
 }
 
-.fs-42{
+.fs-42 {
   font-size: 2.625rem;
 }
 
-.underline-approach{
-  text-decoration: underline!important;
-  text-decoration-color: #f47920!important;
-  text-decoration-thickness: 6px!important;
+.underline-approach {
+  text-decoration: underline !important;
+  text-decoration-color: #f47920 !important;
+  text-decoration-thickness: 6px !important;
 }
 
-.fw-600{
+.fw-600 {
   font-weight: 700;
 }
 
-.sox-header{
+.sox-header {
   min-height: calc(100vh - 87px);
   background-image: url(../images/new.png);
   background-repeat: no-repeat;
@@ -417,47 +413,45 @@ button.nav-link{
 }
 
 .text-theme {
-  color: #F47920;
+  color: #f47920;
 }
 
-.fs-24{
+.fs-24 {
   font-size: 24px;
 }
 
-
 .approach-card {
-  background-color: #F47920;
+  background-color: #f47920;
   color: #ffffff;
   font-size: 1.25rem;
 }
 
-.output{
-  font-size: 1.25rem;
+.output {
+  font-size: 1rem;
 }
 
 .output {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
-  border-bottom:2px solid #BFC0C2;
+  border-bottom: 2px solid #bfc0c2;
 }
-
 
 .industries-tabs .nav {
   display: flex;
   justify-content: center;
+  gap: 30px !important;
+  flex-wrap: wrap !important;
 }
 
 .industries-tabs .nav .nav-item {
   border-bottom: none;
-  width: 140px;
 }
 
 .industries-tabs .nav .nav-item button {
-  width: 130px;
   white-space: nowrap;
   text-align: center;
-  background-color: #BFC0C2;
+  background-color: #bfc0c2;
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
@@ -468,7 +462,7 @@ button.nav-link{
 }
 
 .industries-tabs .nav .nav-item button.active {
-  background-color: #F47920;
+  background-color: #f47920;
   font-size: 15px;
 }
 
@@ -478,10 +472,13 @@ button.nav-link{
   font-size: 5rem;
 }
 
-
 .treding-headin-2 {
   margin-top: -30px;
   font-size: 4rem;
   font-style: italic;
   font-weight: 500;
+}
+
+.approach-card span {
+  font-size: 22px !important;
 }

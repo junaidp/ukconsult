@@ -3,7 +3,7 @@ import React from "react";
 const Checklist = () => {
   return (
     <div>
-      <section className="py-5 bg-light">
+      <section className="py-2 bg-light">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">

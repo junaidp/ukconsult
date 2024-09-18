@@ -18,7 +18,7 @@ const Implementation = () => {
           </div>
           <div className="row mt-4 justify-content-center font-inter">
             <div className="col-lg-3 col-md-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-4 h-100">
+              <div className="approach-card pb-3 px-3 pt-4 h-100 bg-main">
                 <p>
                   <b>Develop a comprehensive strategy</b> covering project
                   communication, efficient implementation, external audit
@@ -28,7 +28,7 @@ const Implementation = () => {
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-4 h-100">
+              <div className="approach-card pb-3 px-3 pt-4 h-100 bg-main">
                 <p>
                   <b>Perform scoping and risk assessment</b> across Operations,
                   Reporting, and Compliance domains, with input from relevant
@@ -37,7 +37,7 @@ const Implementation = () => {
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-4 h-100">
+              <div className="approach-card pb-3 px-3 pt-4 h-100 bg-main">
                 <p>
                   <b>Conduct an "As Is" assessment</b> to document current
                   processes, understand key risks, and evaluate existing
@@ -46,7 +46,7 @@ const Implementation = () => {
               </div>
             </div>
             <div className="col-lg-3 col-md-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-4 h-100">
+              <div className="approach-card pb-3 px-3 pt-4 h-100 bg-main">
                 <p>
                   <b>Identify control gaps and weaknesses,</b> eliminating
                   redundant activities while introducing robust controls to
@@ -55,7 +55,7 @@ const Implementation = () => {
               </div>
             </div>
             <div className="col-md-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-4 h-100">
+              <div className="approach-card pb-3 px-3 pt-4 h-100 bg-main">
                 <p>
                   <b>Collaborate with management</b> to ensure that control
                   weaknesses are addressed with actionable steps and that the
@@ -64,7 +64,7 @@ const Implementation = () => {
               </div>
             </div>
             <div className="col-md-6 mb-3">
-              <div className="approach-card pb-3 px-3 pt-4 h-100">
+              <div className="approach-card pb-3 px-3 pt-4 h-100 bg-main">
                 <p>
                   <b>Document “To Be”</b> processes with recommended controls,
                   clearly mapping inputs, outputs, control points, and

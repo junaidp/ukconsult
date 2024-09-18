@@ -9,10 +9,12 @@ import Checklist from "../components/sox-implementation/checklist";
 import Blogs from "../components/common/blogs";
 import Contact from "../components/common/contact";
 import Newsletter from "../components/common/newsletter";
+import Header from "../components/common/header";
 
 const SoxImplementation = () => {
   return (
     <div>
+      <Header />
       <Hero />
       <Quote />
       <Implementation />
@@ -22,7 +24,7 @@ const SoxImplementation = () => {
       <Checklist />
       <Blogs />
       <Contact />
-      <Newsletter />
+      <Newsletter newsletter={true} />
     </div>
   );
 };
