@@ -8,14 +8,14 @@ const Leadership = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <h4 class="border-left-theme ps-3 fw-bold">Our Leadership</h4>
+              <h4 className="border-left-theme ps-3 fw-bold">Our Leadership</h4>
               <h1 className="main-heading my-4">
                 Elite Leadership, Industry Veterans
               </h1>
             </div>
           </div>
           <div className="col-12">
-            <div className="row" style={{ gap: "143px" }}>
+            <div className="row gap-143">
               <div className="col-lg-5">
                 <div className="border leader-card">
                   <img
@@ -109,7 +109,7 @@ const Leadership = () => {
                       and compliance, with extensive experience in developing
                       and managing AML frameworks for fintech companies and
                       ensuring regulatory compliance across various sectors.
-                      <span style={{ visibility: "hidden" }}>
+                      <span className="hidden">
                         ensuring regulatory compliance across various.
                       </span>
                     </p>

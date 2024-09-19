@@ -21,30 +21,56 @@
   width: 200px;
 }
 
-.form-bottom{
+.form-bottom {
   margin-left: -35px;
   position: relative;
   top: 23px;
 }
 
-.ml-42{
+.ml-42 {
   margin-left: 42px;
 }
 
-.mb-50{
+.mb-50 {
   margin-bottom: 50px;
 }
 
-.no-wrap{
+.no-wrap {
   text-wrap: nowrap;
+}
+.flex-1 {
+  flex: 1 !important;
 }
 
 .mt-56 {
   margin-top: 56px;
 }
 
-.gap-95{
+.gap-95 {
   gap: 95px;
+}
+
+.h-40 {
+  height: 40px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+.gap-143 {
+  gap: 143px;
+}
+
+.home-hero-quote {
+  color: #5d6771;
+}
+.card {
+  padding: 0px;
 }
 
 .bg-main {
@@ -310,6 +336,64 @@
   display: none !important;
 }
 
+.small-screen-text {
+  display: none;
+}
+.contact-form {
+  display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-form {
+    flex-direction: column;
+  }
+  .form-bottom {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .small-screen-text {
+    display: block;
+  }
+  .full-review-header {
+    display: none;
+  }
+  .sox-form {
+    justify-content: flex-start !important;
+  }
+  .newsletter-form {
+    margin-top: 20px;
+  }
+  .contact-hero-img {
+    display: none;
+  }
+}
+@media screen and (max-width: 990px) {
+  .home-hero-img {
+    display: none !important;
+  }
+  .partner-box {
+    justify-content: flex-start !important;
+    margin-top: 34px;
+  }
+  .no-wrap {
+    text-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .col-8 {
+    flex: 4;
+  }
+  .sox-hero {
+    padding: 0px;
+  }
+  .main-heading {
+    font-size: 2.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .testimonial-slide {
     padding: 15px;
@@ -329,14 +413,19 @@
   }
 }
 
-@media screen and (max-width: 800px) {
-  .col-8 {
-    flex: 4;
+@media (max-width: 608px) {
+  .contact-form-wrap {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
   }
-  .sox-hero {
-    padding: 0px;
+  .contact-form-btn {
+    width: 200px !important;
   }
-  .main-heading {
-    font-size: 2.8rem;
+}
+
+@media (max-width: 450px) {
+  .contact-form-wrap {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
   }
 }

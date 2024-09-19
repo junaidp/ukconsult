@@ -104,7 +104,7 @@ const Hero = () => {
                 </ul>
               </div>
               <div className="col-lg-6">
-                <div className="row justify-content-center">
+                <div className="row justify-content-center sox-form">
                   <div className="col-8">
                     <form onSubmit={formik.handleSubmit}>
                       <div className="border rounded bg-white p-4">

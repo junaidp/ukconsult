@@ -74,7 +74,17 @@ const Testimonial = () => {
                       <div className="bg-white p-3 pb-5">
                         <div className="row">
                           <div className="col-lg-4">
-                            <h5 className="fw-bold text-start">Full Review</h5>
+                            <h5 className="fw-bold text-start full-review-header">
+                              Full Review
+                            </h5>
+                            <h3 className="mt-4 small-screen-text">
+                              Bilal Aslam
+                            </h3>
+                            <p className="m-0 fs-7 fw-bold text-secondary small-screen-text">
+                              Head of Finance <br />
+                              Dhafrah PV2 Energy Company LLC
+                            </p>
+                            <hr />
                           </div>
                           <div className="col-lg-8 text-secondary text-start">
                             After screening of multiple proposals, I selected
@@ -148,7 +158,17 @@ const Testimonial = () => {
                       <div className="bg-white p-3 pb-5">
                         <div className="row">
                           <div className="col-lg-4">
-                            <h5 className="fw-bold text-start">Full Review</h5>
+                            <h5 className="fw-bold text-start full-review-header">
+                              Full Review
+                            </h5>
+                            <h3 className="mt-4 small-screen-text">
+                              MUAZZAM UR REHMAN
+                            </h3>
+                            <p className="m-0 fs-7 fw-bold text-secondary small-screen-text">
+                              CFO <br />
+                              Taweelah RO Desalination Company
+                            </p>
+                            <hr />
                           </div>
                           <div className="col-lg-8 text-secondary text-start">
                             We engaged Hyphen Consultancy - led by Faheem
@@ -161,7 +181,7 @@ const Testimonial = () => {
                             appropriate controls but also provided opportunity
                             for us to improvise the efficiency and effectiveness
                             of underlying processes.
-                            <span style={{ visibility: "hidden" }}>
+                            <span className="hidden">
                               business partner. I acknowledge that approach was
                               pragmatic, client oriented, focused with clear
                               objectivity. Hyphen supported us day/night during

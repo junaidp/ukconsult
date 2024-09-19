@@ -10,12 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.0",
-    "classnames": "^2.5.1",
     "emailjs-com": "^3.2.0",
-    "express": "^4.21.0",
     "formik": "^2.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,7 +19,6 @@
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.4",
     "yup": "^1.4.0"
   },
   "devDependencies": {

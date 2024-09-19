@@ -7,7 +7,7 @@ const Leadership = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <h4 class="border-left-theme ps-3 fw-bold">Our Leadership</h4>
+              <h4 className="border-left-theme ps-3 fw-bold">Our Leadership</h4>
               <h1 className="main-heading my-4">
                 Elite Leadership, Industry Veterans
               </h1>

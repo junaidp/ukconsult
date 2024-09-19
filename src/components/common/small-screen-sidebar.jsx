@@ -50,7 +50,7 @@ const SideBar = ({ showSidebar, setShowSidebar }) => {
             </Link>
           </li>
         </ul>
-        <Link to="/sox-implementation" onClick={() => setShowSidebar(false)}>
+        <Link to="/contact" onClick={() => setShowSidebar(false)}>
           <button className="btn btn-primary">Contact Us</button>
         </Link>
       </div>

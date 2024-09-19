@@ -17,7 +17,7 @@ const Hero = () => {
               industry and organizational needs.
             </p>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 contact-hero-img">
             <div className="text-center">
               <img
                 src="assets/images/header-img-new.png"

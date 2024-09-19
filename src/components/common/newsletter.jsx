@@ -70,14 +70,14 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
                   </h2>
                 </div>
               </div>
-              <div className="col-lg-5">
+              <div className="col-lg-5 newsletter-form">
                 <Formik
                   initialValues={initialValues}
                   validationSchema={validationSchema}
                   onSubmit={handleSubmit}
                 >
                   {({ isSubmitting }) => (
-                    <Form className="d-flex">
+                    <Form className="d-flex flex-wrap gap-2">
                       <div className="me-3 w-75">
                         <Field
                           type="email"
@@ -143,7 +143,7 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
         <div className="container">
           <div className="row gap-95">
             <div className="col-lg-5">
-              <h4 class="border-left-theme ps-3 fw-bold">Reach out to us</h4>
+              <h4 className="border-left-theme ps-3 fw-bold">Reach out to us</h4>
               <h1 className="main-heading my-4">
                 Contact Us Today For A Free Consultation
               </h1>

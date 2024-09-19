@@ -485,7 +485,7 @@ button.nav-link {
   display: flex;
 }
 
-.inter{
+.inter {
   font-family: "Inter", sans-serif !important;
 }
 
@@ -514,12 +514,16 @@ button.nav-link {
     left: 44% !important;
   }
 }
+
 @media screen and (max-width: 1000px) {
   .tetimonial {
     display: none;
   }
   .tetimonial2 {
     display: none;
+  }
+  .who-are-we-text {
+    margin-left: 5px !important;
   }
 }
 

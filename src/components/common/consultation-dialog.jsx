@@ -8,11 +8,8 @@ const ConsultationDialog = () => {
         <div className="container">
           <div className="row text-center">
             <div className="col-12 card shadow rounded">
-              <div className="row">
-                <div
-                  className="col-6 position-relative"
-                  style={{ background: "#F47920" }}
-                >
+              <div className="contact-form">
+                <div className="flex-1 bg-main">
                   <div className="row pt-5 pb-3 px-5">
                     <div className="col-12 text-start">
                       <h2 className="main-heading mb-3 text-white">
@@ -58,7 +55,7 @@ const ConsultationDialog = () => {
                   </div>
                 </div>
                 {/* Right side: Form section */}
-                <div className="col-6 py-5 px-5">
+                <div className="py-5 px-5 flex-1">
                   <div className="row w-100">
                     <div className="col-6">
                       <div className="mb-4">
@@ -135,8 +132,7 @@ const ConsultationDialog = () => {
                     <div className="col-12 text-end">
                       <button
                         type="button"
-                        className="btn btn-dark w-25"
-                        style={{ height: "40px", fontWeight: "bold" }}
+                        className="btn btn-dark w-25 contact-form-btn h-40 bold"
                       >
                         Submit
                       </button>

@@ -69,7 +69,7 @@ const Hero = ({ setOpen }) => {
               SCHEDULE A CONSULTATION
             </button>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 home-hero-img">
             <div className="text-center">
               <img src="assets/images/header-img.png" className="img-fluid" />
             </div>
@@ -81,8 +81,7 @@ const Hero = ({ setOpen }) => {
           <img src="assets/images/divider.png" className="img-fluid w-100" />
         </div>
         <h2
-          className="fw-normal w-lg-50 text-center mx-auto my-5"
-          style={{ color: "#5D6771" }}
+          className="fw-normal w-lg-50 text-center mx-auto my-5 home-hero-quote"
         >
           We have the right people with the right expertise and a single vision
           – <span className="fw-bold">your success.</span>
@@ -198,13 +197,13 @@ const Hero = ({ setOpen }) => {
                   </ul>
                 </div>
                 <div className="col-lg-6">
-                  <div className="row justify-content-center">
+                  <div className="row justify-content-center partner-box">
                     <div className="col-md-10">
                       <div className="tab-content" id="myTabContent">
                         <div
                           className="tab-pane fade show active"
                           id="home-tab-pane"
-                          tabindex="0"
+                          tabIndex="0"
                         >
                           <div className="nav-card rounded">
                             <div className="nav-card-header py-3 ps-3">

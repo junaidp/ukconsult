@@ -200,9 +200,9 @@ const Industry = () => {
       <div>
         <section className="py-5 bg-light">
           <div className="container">
-            <div class="row">
-              <h2 class="mt-4 treding-heading text-theme">Trending</h2>
-              <h2 class="treding-headin-2">Insights & Resources</h2>
+            <div className="row">
+              <h2 className="mt-4 treding-heading text-theme">Trending</h2>
+              <h2 className="treding-headin-2">Insights & Resources</h2>
             </div>
             <div className="row mt-5">
               {selectedItem?.blogs?.map((blog, ind) => {
