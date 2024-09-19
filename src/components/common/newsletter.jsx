@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
-const Newsletter = ({ newsletter }) => {
+const Newsletter = ({ newsletter, setOpen, industryPage }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const initialValues = {
@@ -112,10 +112,15 @@ const Newsletter = ({ newsletter }) => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center">
-                <h2 className="fw-bold">Ready to Ensure SOX Compliance?</h2>
+                <h2 className="fw-bold">
+                  {industryPage
+                    ? "See How We Can Help Your Industry"
+                    : "Ready to Ensure SOX Compliance?"}
+                </h2>
                 <p className="px-lg-5 fs-20">
-                  Take the first step towards robust internal controls and
-                  secure financial reporting.
+                  {industryPage
+                    ? "Former Big 4 Consultants, Now on Your Team"
+                    : " Take the first step towards robust internal controls and   secure financial reporting."}
                 </p>
                 <div className="mt-4">
                   <button
@@ -123,8 +128,9 @@ const Newsletter = ({ newsletter }) => {
                     type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
+                    onClick={() => setOpen(true)}
                   >
-                    Schedule a Free Consultation
+                    SCHEDULE A FREE CONSULTATION
                   </button>
                 </div>
               </div>
@@ -135,8 +141,8 @@ const Newsletter = ({ newsletter }) => {
 
       <section className="py-5">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
+          <div className="row gap-95">
+            <div className="col-lg-5">
               <h4 class="border-left-theme ps-3 fw-bold">Reach out to us</h4>
               <h1 className="main-heading my-4">
                 Contact Us Today For A Free Consultation

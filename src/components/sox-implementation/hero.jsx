@@ -55,7 +55,7 @@ const Hero = () => {
           <div className="sox-hero">
             <div className="row">
               <div className="col-lg-6">
-                <h1 className="fw-bold text-black sox-heading main-heading text-white">
+                <h1 className="fw-bold text-black sox-heading main-heading text-white no-wrap">
                   SOX Implementation <br />
                   <span className="text-theme">Routes</span>
                 </h1>
@@ -63,9 +63,11 @@ const Hero = () => {
                   Tailored Solutions for Every Business Need
                 </h3>
                 <h4 className="pe-lg-5 fs-5 text-black lh-22 text-white fs-24">
-                At Hyphen, we offer three distinct routes to help your organization achieve seamless SOX compliance, tailored to your specific needs.
+                  At Hyphen, we offer three distinct routes to help your
+                  organization achieve seamless SOX compliance, tailored to your
+                  specific needs.
                 </h4>
-                <ul className="mt-4 text-black ls-none text-white">
+                <ul className="mt-4 text-black ls-none text-white p-0">
                   <li>
                     <p>
                       <span className="me-2">
@@ -187,7 +189,7 @@ const Hero = () => {
                           ) : null}
                         </div>
                         <button type="submit" className="btn btn-primary w-100">
-                          Schedule a free Consultation
+                          SCHEDULE A FREE CONSULTATION
                         </button>
                       </div>
                     </form>

@@ -1,13 +1,55 @@
 import React from "react";
 
-const Hero = () => {
+const Hero = ({ setOpen }) => {
+  let [array, setArray] = React.useState([
+    {
+      selected: true,
+      id: 1,
+      name: "25+ global Projects",
+      description:
+        "Conducted over 25 Internal Control and Finance Process Improvement engagements across more than 5 countries.",
+    },
+    {
+      selected: false,
+      id: 2,
+      name: "Sectoral expertise",
+      description:
+        "Specialist in complex industries, including Telecom and Utilities.",
+    },
+    {
+      selected: false,
+      id: 3,
+      name: "SOX Leadership",
+      description:
+        "Principal Consultant has extensive experience heading the Internal Control department of a European multinational telecom company and the world's largest resource company.",
+    },
+    {
+      selected: false,
+      id: 4,
+      name: "Reliable Partner",
+      description:
+        "Successfully implemented an Internal Control Framework in the world's largest desalination and solar power company.",
+    },
+  ]);
+
+  function handleClick(id) {
+    setArray((pre) =>
+      pre?.map((item) =>
+        item?.id === id
+          ? { ...item, selected: true }
+          : { ...item, selected: false }
+      )
+    );
+  }
+
   return (
     <div>
       <header className="overflow-x-hidden">
         <div className="row">
           <div className="col-lg-6  home-hero">
-            <h1 className="main-heading">
-              Sarbanes Oxley (SOX) Implementation Specialists
+            <h1 className="main-heading ">
+              <span className="no-wrap">Sarbanes Oxley (SOX)</span>{" "}
+              Implementation Specialists
             </h1>
             <h4 className="fs-4 my-4">
               Big 4 Expertise at a Fraction of the Cost.
@@ -22,8 +64,9 @@ const Hero = () => {
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
+              onClick={() => setOpen(true)}
             >
-              Schedule a Consultation
+              SCHEDULE A CONSULTATION
             </button>
           </div>
           <div className="col-lg-6">
@@ -33,41 +76,53 @@ const Hero = () => {
           </div>
         </div>
       </header>
-      <section class="pb-4">
-        <div class="container-fluid p-0">
-          <img src="assets/images/divider.png" class="img-fluid w-100" />
+      <section className="pb-4">
+        <div className="container-fluid p-0">
+          <img src="assets/images/divider.png" className="img-fluid w-100" />
         </div>
-        <h2 class="fw-normal w-lg-50 text-center mx-auto my-5">
+        <h2
+          className="fw-normal w-lg-50 text-center mx-auto my-5"
+          style={{ color: "#5D6771" }}
+        >
           We have the right people with the right expertise and a single vision
-          – <span class="fw-bold">your success.</span>
+          – <span className="fw-bold">your success.</span>
         </h2>
-        <div class="container-fluid p-0 divider-bottom">
-          <img src="assets/images/divider.png" class="img-fluid w-100" />
+        <div className="container-fluid p-0 divider-bottom">
+          <img src="assets/images/divider.png" className="img-fluid w-100" />
         </div>
       </section>
-      <section class="py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <h4 class="border-left-theme ps-3 fw-bold">
+      <section className="py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <h4 className="border-left-theme ps-3 fw-bold">
                 Why Partner with Us?
               </h4>
-              <h2 class="main-heading my-4">
+              <h2 className="main-heading my-4">
                 Global Experience in SOX Compliance
               </h2>
-              <p class="text-secondary fs-20">
+              <p className="text-secondary fs-20">
                 Our team has been entrenched in SOX since its inception. We have
                 a deep understanding of the complexity and expectations of
                 planning and delivering SOX readiness and compliance services.
               </p>
             </div>
-            <div class="col-lg-12 font-inter">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="nav nav-tabs w-lg-50" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
+            <div className="col-lg-12 font-inter">
+              <div className="row">
+                <div className="col-lg-6">
+                  <ul
+                    className="nav nav-tabs w-lg-50"
+                    id="myTab"
+                    role="tablist"
+                  >
+                    <li className="nav-item" role="presentation">
                       <button
-                        class="nav-link active"
+                        className={`nav-link ${
+                          array?.find((item) => item?.selected === true)?.id ===
+                          1
+                            ? "active"
+                            : ""
+                        }`}
                         id="home-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#home-tab-pane"
@@ -75,13 +130,19 @@ const Hero = () => {
                         role="tab"
                         aria-controls="home-tab-pane"
                         aria-selected="true"
+                        onClick={() => handleClick(1)}
                       >
                         25+ global Projects
                       </button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <li className="nav-item" role="presentation">
                       <button
-                        class="nav-link"
+                        className={`nav-link ${
+                          array?.find((item) => item?.selected === true)?.id ===
+                          3
+                            ? "active"
+                            : ""
+                        }`}
                         id="profile-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#profile-tab-pane"
@@ -89,13 +150,19 @@ const Hero = () => {
                         role="tab"
                         aria-controls="profile-tab-pane"
                         aria-selected="false"
+                        onClick={() => handleClick(3)}
                       >
                         SOX Leadership
                       </button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <li className="nav-item" role="presentation">
                       <button
-                        class="nav-link"
+                        className={`nav-link ${
+                          array?.find((item) => item?.selected === true)?.id ===
+                          2
+                            ? "active"
+                            : ""
+                        }`}
                         id="contact-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#contact-tab-pane"
@@ -103,13 +170,19 @@ const Hero = () => {
                         role="tab"
                         aria-controls="contact-tab-pane"
                         aria-selected="false"
+                        onClick={() => handleClick(2)}
                       >
-                        Sectoral Expertise
+                        Sectoral expertise
                       </button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <li className="nav-item" role="presentation">
                       <button
-                        class="nav-link"
+                        className={`nav-link ${
+                          array?.find((item) => item?.selected === true)?.id ===
+                          4
+                            ? "active"
+                            : ""
+                        }`}
                         id="disabled-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#disabled-tab-pane"
@@ -117,89 +190,33 @@ const Hero = () => {
                         role="tab"
                         aria-controls="disabled-tab-pane"
                         aria-selected="false"
+                        onClick={() => handleClick(4)}
                       >
                         Reliable Partner
                       </button>
                     </li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
-                  <div class="row justify-content-center">
-                    <div class="col-md-10">
-                      <div class="tab-content" id="myTabContent">
+                <div className="col-lg-6">
+                  <div className="row justify-content-center">
+                    <div className="col-md-10">
+                      <div className="tab-content" id="myTabContent">
                         <div
-                          class="tab-pane fade show active"
+                          className="tab-pane fade show active"
                           id="home-tab-pane"
-                          role="tabpanel"
-                          aria-labelledby="home-tab"
                           tabindex="0"
                         >
-                          <div class="nav-card rounded">
-                            <div class="nav-card-header py-3 ps-3">
-                              <h2 class="text-white">25+ global Projects</h2>
+                          <div className="nav-card rounded">
+                            <div className="nav-card-header py-3 ps-3">
+                              <h2 className="text-white">
+                                {array?.find((item) => item?.selected)?.name}
+                              </h2>
                             </div>
-                            <div class="p-5 fs-20">
-                              Consultants having extensive experience heading
-                              the Internal Control department of a
-                              <b>European multinational</b> telecom company and
-                              the <b>world's largest resource company.</b>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="tab-pane fade"
-                          id="profile-tab-pane"
-                          role="tabpanel"
-                          aria-labelledby="profile-tab"
-                          tabindex="0"
-                        >
-                          <div class="nav-card rounded">
-                            <div class="nav-card-header py-3 ps-3">
-                              <h5 class="text-white">SOX Leadership</h5>
-                            </div>
-                            <div class="p-5 fs-20">
-                              Consultants having extensive experience heading
-                              the Internal Control department of a
-                              <b>European multinational</b> telecom company and
-                              the <b>world's largest resource company.</b>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="tab-pane fade"
-                          id="contact-tab-pane"
-                          role="tabpanel"
-                          aria-labelledby="contact-tab"
-                          tabindex="0"
-                        >
-                          <div class="nav-card rounded">
-                            <div class="nav-card-header py-3 ps-3">
-                              <h5 class="text-white">Sectoral Expertise</h5>
-                            </div>
-                            <div class="p-5 fs-20">
-                              Consultants having extensive experience heading
-                              the Internal Control department of a
-                              <b>European multinational</b> telecom company and
-                              the <b>world's largest resource company.</b>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="tab-pane fade"
-                          id="disabled-tab-pane"
-                          role="tabpanel"
-                          aria-labelledby="disabled-tab"
-                          tabindex="0"
-                        >
-                          <div class="nav-card rounded">
-                            <div class="nav-card-header py-3 ps-3">
-                              <h5 class="text-white">Reliable Partner</h5>
-                            </div>
-                            <div class="p-5 fs-20">
-                              Consultants having extensive experience heading
-                              the Internal Control department of a
-                              <b>European multinational</b> telecom company and
-                              the <b>world's largest resource company.</b>
+                            <div className="p-5 fs-20">
+                              {
+                                array?.find((item) => item?.selected === true)
+                                  ?.description
+                              }
                             </div>
                           </div>
                         </div>
@@ -212,26 +229,28 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <section class="py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <h4 class="border-left-theme ps-3 fw-bold">Our Services</h4>
-              <h2 class="main-heading my-4">Hyphen SOX Compliance Services</h2>
-              <p class="text-secondary fs-20">
+      <section className="py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <h4 className="border-left-theme ps-3 fw-bold">Our Services</h4>
+              <h2 className="main-heading my-4">
+                Hyphen SOX Compliance Services
+              </h2>
+              <p className="text-secondary fs-20">
                 The complexity and volume of SOX compliance requirements can
                 place significant stress on your internal teams. Partner with
                 Hyphen to manage risk and streamline your SOX compliance program
               </p>
             </div>
-            <div class="col-12">
-              <div class="row mt-5">
-                <div class="col-lg-6">
-                  <div class="mb-4">
-                    <h5 class="fw-bold text-primary fs-20">
+            <div className="col-12">
+              <div className="row mt-5">
+                <div className="col-lg-6">
+                  <div className="mb-4">
+                    <h5 className="fw-bold text-primary fs-20">
                       Full Implementation
                     </h5>
-                    <p class="text-secondary">
+                    <p className="text-secondary">
                       Our Full Implementation service offers a comprehensive
                       solution where our experienced team fully integrates with
                       your organization to design, implement, and manage your
@@ -243,10 +262,10 @@ const Hero = () => {
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="mb-4">
-                    <h5 class="fw-bold text-primary fs-20">Hybrid Model</h5>
-                    <p class="text-secondary">
+                <div className="col-lg-6">
+                  <div className="mb-4">
+                    <h5 className="fw-bold text-primary fs-20">Hybrid Model</h5>
+                    <p className="text-secondary">
                       The Hybrid Model gives you the flexibility to take control
                       of your SOX compliance with our industry-specific Risk
                       Control Matrix (RCM) as your guide. This model is perfect
@@ -258,12 +277,12 @@ const Hero = () => {
                     </p>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="mb-4">
-                    <h5 class="fw-bold text-primary fs-20">
+                <div className="col-lg-6">
+                  <div className="mb-4">
+                    <h5 className="fw-bold text-primary fs-20">
                       AI Implementation
                     </h5>
-                    <p class="text-secondary">
+                    <p className="text-secondary">
                       AI-Driven Implementation for Budget-Conscious
                       Organizations. You will gain access to our in-house AI
                       Model, which will generate process flows and Risk Control

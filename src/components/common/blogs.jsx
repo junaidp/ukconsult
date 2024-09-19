@@ -62,7 +62,7 @@ const Blogs = () => {
                 </p>
               </div>
             </div>
-            <div className="col-12 text-center">
+            <div className="col-12 text-center mt-56">
               <button className="btn btn-primary px-4 py-2">Load more</button>
             </div>
           </div>

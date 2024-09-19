@@ -25,21 +25,21 @@ const Form = () => {
                 </div>
 
                 <div className="row py-2 px-5">
-                  <div className="col-12 text-white mb-3">
+                  <div className="col-12 text-white mb-50">
                     <div className="d-flex align-items-center">
                       <img src="assets/images/phone.png" alt="Phone" />
                       <p className="ps-4 mb-0">+44 7477 204632</p>
                     </div>
                   </div>
 
-                  <div className="col-12 text-white mb-3">
+                  <div className="col-12 text-white mb-50">
                     <div className="d-flex align-items-center">
                       <img src="assets/images/email-.png" alt="Email" />
                       <p className="ps-4 mb-0">Info@hyphenAdvisory.com</p>
                     </div>
                   </div>
 
-                  <div className="col-12 text-white mb-3 pb-5 mb-5">
+                  <div className="col-12 text-white mb-3 pb-5 mb-50">
                     <div className="d-flex align-items-center">
                       <img src="assets/images/address.png" alt="Address" />
                       <p className="ps-4 mb-0">
@@ -48,7 +48,7 @@ const Form = () => {
                     </div>
                   </div>
 
-                  <div className="col-12 text-white mb-3">
+                  <div className="col-12 text-white mb-3 form-bottom">
                     <img
                       src="assets/images/touch-bottom.png"
                       alt="Decoration"
@@ -65,6 +65,7 @@ const Form = () => {
                         id="standard-basic"
                         label="first Name"
                         variant="standard"
+                        className="w-100"
                       />
                     </div>
                   </div>
@@ -74,6 +75,7 @@ const Form = () => {
                         id="standard-basic"
                         label="last Name"
                         variant="standard"
+                        className="w-100"
                       />
                     </div>
                   </div>
@@ -86,6 +88,7 @@ const Form = () => {
                         id="standard-basic"
                         label="work Email"
                         variant="standard"
+                        className="w-100"
                       />
                     </div>
                   </div>
@@ -95,6 +98,7 @@ const Form = () => {
                         id="standard-basic"
                         label="phone Number"
                         variant="standard"
+                        className="w-100"
                       />
                     </div>
                   </div>
@@ -107,6 +111,7 @@ const Form = () => {
                         id="standard-basic"
                         label="company"
                         variant="standard"
+                        className="w-100"
                       />
                     </div>
                   </div>

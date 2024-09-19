@@ -153,7 +153,9 @@ const Industry = () => {
                   return (
                     <li className="nav-item" role="presentation" key={ind}>
                       <button
-                        className="nav-link active"
+                        className={`nav-link ${
+                          currentButton === button ? "active" : ""
+                        }`}
                         id="newHomeTab"
                         data-bs-toggle="tab"
                         data-bs-target="#newHomeTabPane"

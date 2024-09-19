@@ -1,13 +1,15 @@
 import React from "react";
 
-const SOX = () => {
+const SOX = ({ setOpen }) => {
   return (
     <div>
       <section className="bg-light py-5">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h2 className="fw-bold fs-42">Partner with Hyphen to simplify SOX compliance</h2>
+              <h2 className="fw-bold fs-42">
+                Partner with Hyphen to simplify SOX compliance
+              </h2>
               <p className="px-lg-5 text-secondary fs-20">
                 Enhance the efficiency, accuracy and security of your SOX
                 program.
@@ -18,8 +20,9 @@ const SOX = () => {
                   type="button"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
+                  onClick={() => setOpen(true)}
                 >
-                  Schedule a FREE Consultation
+                  SCHEDULE A FREE CONSULTATION
                 </button>
               </div>
             </div>

@@ -6,17 +6,26 @@ import Leadership from "../components/about/leadership";
 import Consultation from "../components/about/consultation";
 import Newsletter from "../components/common/newsletter";
 import Header from "../components/common/header";
+import ConsultationDialog from "../components/common/consultation-dialog";
 
 const About = () => {
+  const [open, setOpen] = React.useState(false);
   return (
     <div>
+      {open && (
+        <div className="model-parent" onClick={() => setOpen(false)}>
+          <div className="model-wrap">
+            <ConsultationDialog setOpen={setOpen} />
+          </div>
+        </div>
+      )}
       <Header />
       <Hero />
       <Values />
       <Quote />
       <Leadership />
-      <Consultation />
-      <Newsletter newsletter={false} />
+      <Consultation setOpen={setOpen} />
+      <Newsletter newsletter={false} setOpen={setOpen} industryPage={false} />
     </div>
   );
 };

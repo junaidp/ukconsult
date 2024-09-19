@@ -7,17 +7,21 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-6">
-              <div >
+              <div>
                 <a href="#">
                   <img
-                      src="assets/images/logo-ver.png" className={"logo-footer"}
+                    src="assets/images/logo-ver.png"
+                    className={"logo-footer"}
                   />
                 </a>
                 <p className="text-secondary">
-                  Hyphen is an award-winning Uk based, dynamic advisory firm offering services that are flexible and scalable to meet the specific needs of our clients of all sizes and industries. Committed to providing real solutions that offer practical and efficient improvements to processes, procedures and operations.
+                  Hyphen is an award-winning Uk based, dynamic advisory firm
+                  offering services that are flexible and scalable to meet the
+                  specific needs of our clients of all sizes and industries.
+                  Committed to providing real solutions that offer practical and
+                  efficient improvements to processes, procedures and
+                  operations.
                 </p>
-
-
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
@@ -34,7 +38,6 @@ const Footer = () => {
                 <li>
                   <a href="#">Implementation Through AI </a>
                 </li>
-
               </ul>
             </div>
             <div className="col-lg-3 col-md-6">
@@ -61,42 +64,30 @@ const Footer = () => {
             </div>
             <div className="col-lg-2 col-md-6">
               <div>
-                <p className="fw-bold fs-3">Follow Us:  </p>
+                <p className="fw-bold fs-3">Follow Us: </p>
               </div>
               <ul className="mt-3">
                 <li>
                   <a href="#">
                     <img
-                        src="assets/images/footer-icon/LinkedIn.png"
-                        className="me-2"
+                      src="assets/images/footer-icon/LinkedIn.png"
+                      className="me-2"
                     />
                   </a>
                 </li>
               </ul>
               <ul className={"address-box"}>
-                <li  className={"ms-3"}>
-                  <p>
-                    167-169 Great Portland Street
-                    <br/>
-
-                    London
-
-                    +44 7477 204632
-                  </p>
-
-                </li>
                 <li className={"ms-3"}>
                   <p>
-
-
-                    +44 7477 204632
+                    167-169 Great Portland Street London <br />
                   </p>
-
+                </li>
+                <li className={"ms-3"}>
+                  <p>+44 7477 204632</p>
                 </li>
               </ul>
             </div>
           </div>
-
 
           <div className={"row mt-4"}>
             <div className={"col-lg-4"}>
@@ -105,14 +96,10 @@ const Footer = () => {
               </p>
             </div>
             <div className={"col-lg-4"}>
-              <p className={"fw-bold"}>
-                Privacy Policy
-              </p>
+              <p className={"fw-bold"}>Privacy Policy</p>
             </div>
             <div className={"col-lg-4"}>
-              <p className={"fw-bold"}>
-                Terms of Use
-              </p>
+              <p className={"fw-bold"}>Terms of Use</p>
             </div>
           </div>
         </div>

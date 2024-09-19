@@ -1,3 +1,4 @@
+import { Hidden } from "@mui/material";
 import React from "react";
 
 const Leadership = () => {
@@ -14,8 +15,8 @@ const Leadership = () => {
             </div>
           </div>
           <div className="col-12">
-            <div className="row">
-              <div className="col-lg-6">
+            <div className="row" style={{ gap: "143px" }}>
+              <div className="col-lg-5">
                 <div className="border leader-card">
                   <img
                     src="assets/images/leader-1.png"
@@ -92,7 +93,7 @@ const Leadership = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-5">
                 <div className="border leader-card">
                   <img
                     src="assets/images/leader-2.png"
@@ -108,6 +109,9 @@ const Leadership = () => {
                       and compliance, with extensive experience in developing
                       and managing AML frameworks for fintech companies and
                       ensuring regulatory compliance across various sectors.
+                      <span style={{ visibility: "hidden" }}>
+                        ensuring regulatory compliance across various.
+                      </span>
                     </p>
                     <p>
                       <a href="#" className="read-more">

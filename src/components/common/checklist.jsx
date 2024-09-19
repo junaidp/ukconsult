@@ -1,13 +1,15 @@
 import React from "react";
 
-const Checklist = () => {
+const Checklist = ({ lightBg }) => {
   return (
     <div>
-      <section className="py-2 bg-light">
+      <section className={`py-2 ${lightBg ? "bg-light" : ""}`}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <h2 className="border-left-theme-2 ps-3 py-1">SOX Compliance Checklist</h2>
+              <h2 className="border-left-theme-2 ps-3 py-1">
+                SOX Compliance Checklist
+              </h2>
               <p className="text-secondary mt-4 fs-20">
                 We've been working with SOX compliance since the beginning. We
                 know how challenging it can be to plan and achieve SOX
