@@ -77,7 +77,7 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
                   onSubmit={handleSubmit}
                 >
                   {({ isSubmitting }) => (
-                    <Form className="d-flex flex-wrap gap-2">
+                    <Form className="d-flex gap-2">
                       <div className="me-3 w-75">
                         <Field
                           type="email"
@@ -93,7 +93,7 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
                       </div>
                       <button
                         type="submit"
-                        className="btn btn-white px-4"
+                        className="btn btn-white px-4 lato"
                         disabled={isLoading || isSubmitting}
                       >
                         {isLoading ? "Loading..." : "Subscribe"}

@@ -11,7 +11,7 @@ const ConsultationDialog = () => {
               <div className="contact-form">
                 <div className="flex-1 bg-main">
                   <div className="row pt-5 pb-3 px-5">
-                    <div className="col-12 text-start">
+                    <div className="col-12 text-start consultation-dialog-content">
                       <h2 className="main-heading mb-3 text-white">
                         Get in Touch
                       </h2>
@@ -23,24 +23,26 @@ const ConsultationDialog = () => {
                   </div>
 
                   <div className="row py-2 px-5">
-                    <div className="col-12 text-white mb-50">
+                    <div className="col-12 text-white mb-50 consultation-dialog-card">
                       <div className="d-flex align-items-center">
                         <img src="assets/images/phone.png" alt="Phone" />
-                        <p className="ps-4 mb-0">+44 7477 204632</p>
+                        <p className="ps-4 mb-0 lato">+44 7477 204632</p>
                       </div>
                     </div>
 
-                    <div className="col-12 text-white mb-50">
+                    <div className="col-12 text-white mb-50 consultation-dialog-card">
                       <div className="d-flex align-items-center">
                         <img src="assets/images/email-.png" alt="Email" />
-                        <p className="ps-4 mb-0">Info@hyphenAdvisory.com</p>
+                        <p className="ps-4 mb-0 lato">
+                          Info@hyphenAdvisory.com
+                        </p>
                       </div>
                     </div>
 
-                    <div className="col-12 text-white mb-3 pb-5 mb-50">
+                    <div className="col-12 text-white mb-3 pb-5 mb-50 consultation-dialog-card">
                       <div className="d-flex align-items-center">
                         <img src="assets/images/address.png" alt="Address" />
-                        <p className="ps-4 mb-0">
+                        <p className="ps-4 mb-0 lato">
                           167-169 Great Portland Street, London
                         </p>
                       </div>
