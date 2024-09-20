@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 const ConsultationDialog = () => {
   return (
     <div>
-      <section>
+      <section style={{ background: "rgba(0, 0, 0, 0.4)" }}>
         <div className="container">
           <div className="row text-center">
             <div className="col-12 card shadow rounded">

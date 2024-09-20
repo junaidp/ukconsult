@@ -11,7 +11,7 @@ const Industries = () => {
     <div>
       {open && (
         <div className="model-parent" onClick={() => setOpen(false)}>
-          <div className="model-wrap">
+          <div className="model-wrap" onClick={(e) => e.stopPropagation()}>
             <ConsultationDialog setOpen={setOpen} />
           </div>
         </div>
