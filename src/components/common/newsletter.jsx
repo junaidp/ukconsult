@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Newsletter = ({ newsletter, setOpen, industryPage }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState("");
 
   const initialValues = {
     name: "",
@@ -29,26 +30,50 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
       .required("Message is required"),
   });
 
-  const handleSubmit = (values, { resetForm }) => {
+  const handleSubmit = async (values, { resetForm }) => {
     if (isLoading) return;
     setIsLoading(true);
+    try {
+      await axios.post(
+        "https://hyphen-back.vercel.app/api/v1/consultation",
+        values
+      );
+      toast.success(
+        "Thank you for expressing interest in our product! We’re thrilled to provide you with a personalised demo. Our team will be in touch shortly to schedule a demonstration tailored to your needs. Stay tuned"
+      );
+      resetForm();
+    } catch (error) {
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
-    emailjs
-      .send("service_ijyrlcy", "template_3za67cj", values, "Y-d1kMGQ-xCp-FA22")
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          resetForm();
-          toast.success("Message sent successfully!");
-        },
-        (err) => {
-          console.log("FAILED...", err);
-          toast.error("Failed to send message. Please try again later.");
-        }
-      )
-      .finally(() => {
+  const handleSaveEmail = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailRegex.test(email);
+    if (!isValid || email === "") {
+      toast.error("Email is Incorrect");
+    }
+
+    if (isValid && email !== "") {
+      if (isLoading) return;
+
+      setIsLoading(true);
+      try {
+        await axios.post("https://hyphen-back.vercel.app/api/v1/newsLetter", {
+          email,
+        });
+        toast.success(
+          "Thank you for subscribing! We will notify you of new updates."
+        );
+        setEmail("");
         setIsLoading(false);
-      });
+      } catch (error) {
+        setIsLoading(false);
+        toast.error("An error has occurred");
+      }
+    }
   };
 
   return (
@@ -84,16 +109,13 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
                           name="email"
                           placeholder="name@example.com"
                           className="form-control"
-                        />
-                        <ErrorMessage
-                          name="email"
-                          component="div"
-                          className="error"
+                          onChange={(event) => setEmail(event.target.value)}
+                          value={email}
                         />
                       </div>
                       <button
-                        type="submit"
                         className="btn btn-white px-4 lato"
+                        onClick={handleSaveEmail}
                         disabled={isLoading || isSubmitting}
                       >
                         {isLoading ? "Loading..." : "Subscribe"}
@@ -143,7 +165,9 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
         <div className="container">
           <div className="row gap-95">
             <div className="col-lg-5">
-              <h4 className="border-left-theme ps-3 fw-bold">Reach out to us</h4>
+              <h4 className="border-left-theme ps-3 fw-bold">
+                Reach out to us
+              </h4>
               <h1 className="main-heading my-4">
                 Contact Us Today For A Free Consultation
               </h1>

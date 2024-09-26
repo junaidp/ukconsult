@@ -1,7 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import emailjs from "emailjs-com";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Hero = () => {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -21,30 +22,20 @@ const Hero = () => {
       phone: Yup.string().required("Phone is required"),
       message: Yup.string().required("Message is required"),
     }),
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: async (values, { resetForm }) => {
       if (isLoading) return;
       setIsLoading(true);
-      emailjs
-        .send(
-          "service_ijyrlcy",
-          "template_3za67cj",
-          values,
-          "Y-d1kMGQ-xCp-FA22"
-        )
-        .then(
-          (response) => {
-            console.log("SUCCESS!", response.status, response.text);
-            resetForm();
-            toast.success("Message sent successfully!");
-          },
-          (err) => {
-            console.log("FAILED...", err);
-            toast.error("Failed to send message. Please try again later.");
-          }
-        )
-        .finally(() => {
-          setIsLoading(false);
-        });
+      try {
+        await axios.post("https://hyphen-back.vercel.app/api/v1/consultation", values);
+        toast.success(
+          "Thank you for expressing interest in our product! We’re thrilled to provide you with a personalised demo. Our team will be in touch shortly to schedule a demonstration tailored to your needs. Stay tuned"
+        );
+        resetForm();
+      } catch (error) {
+        toast.error("Failed to send message. Please try again later.");
+      } finally {
+        setIsLoading(false);
+      }
     },
   });
 
@@ -188,8 +179,14 @@ const Hero = () => {
                             </div>
                           ) : null}
                         </div>
-                        <button type="submit" className="btn btn-primary w-100">
-                          SCHEDULE A FREE CONSULTATION
+                        <button
+                          type="submit"
+                          className="btn btn-primary w-100"
+                          disabled={isLoading}
+                        >
+                          {isLoading
+                            ? "Sending..."
+                            : "SCHEDULE A FREE CONSULTATION"}
                         </button>
                       </div>
                     </form>

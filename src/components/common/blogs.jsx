@@ -1,72 +1,75 @@
 import React from "react";
+import parse from "html-react-parser";
+import { toast } from "react-toastify";
+import { Chip, CircularProgress } from "@mui/material";
+import moment from "moment";
 
 const Blogs = () => {
+  const [blogs, setBlogs] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+
+  const fetchBlogs = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `https://hyphen-back.vercel.app/api/v1/blogs/getAll`
+      );
+      const data = await response.json();
+      setBlogs(data.blogs);
+      setLoading(false);
+    } catch (error) {
+      toast.error("Error fetching blogs");
+      setLoading(false);
+    }
+  };
+
+  React.useEffect(() => {
+    fetchBlogs();
+  }, []);
+
   return (
     <div>
       <section className="py-5">
-        <div className="container">
-          <div className="row text-center">
-            <div className="col-12 d-flex justify-content-center">
-              <span className="blog">Blog</span>
-            </div>
-            <h1 className="mt-4 main-heading">Insights & Thought Leadership</h1>
-            <p className="px-lg-5 fs-20 text-secondary">
-              Stay informed with expert articles, industry updates, and in-depth
-              analysis on SOX compliance and risk management.
-            </p>
+        {loading ? (
+          <div>
+            <CircularProgress />
           </div>
-          <div className="row mt-5 font-inter">
-            <div className="col-lg-4">
-              <div>
-                <img
-                  src="assets/images/blog-1.png"
-                  className="img-fluid w-100"
-                />
-                <p className="my-3 blog-date">May 9, 2023</p>
-                <h5 className="my-3 fw-bold">
-                  Latest Trends in SOX Compliance
-                </h5>
-                <p>
-                  Discover the evolving landscape of SOX compliance in the UK
-                  and how your company can stay ahead.
-                </p>
+        ) : (
+          <div className="container">
+            <div className="row text-center">
+              <div className="col-12 d-flex justify-content-center">
+                <span className="blog">Blog</span>
               </div>
+              <h1 className="mt-4 main-heading">
+                Insights & Thought Leadership
+              </h1>
+              <p className="px-lg-5 fs-20 text-secondary">
+                Stay informed with expert articles, industry updates, and
+                in-depth analysis on SOX compliance and risk management.
+              </p>
             </div>
-            <div className="col-lg-4">
-              <div>
-                <img
-                  src="assets/images/blog-2.png"
-                  className="img-fluid w-100"
-                />
-                <p className="my-3 blog-date">May 9, 2023</p>
-                <h5 className="my-3 fw-bold">
-                  Best Practices for Effective Risk Management
-                </h5>
-                <p>
-                  Discussing the shift from realistic designs to minimalistic,
-                  flat designs.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div>
-                <img
-                  src="assets/images/blog-3.png"
-                  className="img-fluid w-100"
-                />
-                <p className="my-3 blog-date">May 9, 2023</p>
-                <h5 className="my-3 fw-bold">Expert Opinions</h5>
-                <p>
-                  Exploring the significance of putting the user first in IT
-                  projects
-                </p>
-              </div>
-            </div>
-            <div className="col-12 text-center mt-56">
-              <button className="btn btn-primary px-4 py-2">Load more</button>
+            <div className="row mt-5 font-inter">
+              {blogs?.map((blog, ind) => (
+                <div className="col-lg-4" key={ind}>
+                  <div className="bg-white rounded">
+                    <img
+                      src="assets/images/blog-1.png"
+                      className="img-fluid w-100"
+                    />
+                    <div className="p-3">
+                      <p className="my-3 blog-date">
+                        {moment.utc(blog.updatedAt).format("MMMM Do YYYY")}
+                      </p>
+                      <Chip label={blog.category}/>
+                      <h5 className="my-3 fw-bold">{blog?.title}</h5>
+                      <p>{parse(blog?.description)}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        )}
       </section>
     </div>
   );

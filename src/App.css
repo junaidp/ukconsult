@@ -301,7 +301,7 @@
 .top-bar {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   background-color: white;
   width: 100%;
   box-shadow: 0px -5px 15px 1px #0000001c;
@@ -360,6 +360,10 @@
 .newsletter-form input:focus {
   border: none !important;
   box-shadow: none !important;
+}
+
+.Toastify__toast {
+  z-index: 1000000000000000000000000000000000 !important;
 }
 
 @media screen and (max-width: 1200px) {

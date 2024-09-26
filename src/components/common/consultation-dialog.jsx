@@ -1,7 +1,50 @@
 import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const ConsultationDialog = () => {
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  // Formik setup
+  const formik = useFormik({
+    initialValues: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      firstname: Yup.string().required("First Name is required"),
+      lastname: Yup.string().required("Last Name is required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Work Email is required"),
+      phone: Yup.string().required("Phone Number is required"),
+      company: Yup.string().required("Company is required"),
+      message: Yup.string().required("Message is required"),
+    }),
+    onSubmit: async (values, { resetForm }) => {
+      if (isLoading) return;
+      setIsLoading(true);
+      try {
+        await axios.post("https://hyphen-back.vercel.app/api/v1/users", values);
+        toast.success(
+          "Thank you for expressing interest in our product! We’re thrilled to provide you with a personalised demo. Our team will be in touch shortly to schedule a demonstration tailored to your needs. Stay tuned"
+        );
+        resetForm();
+      } catch (error) {
+        toast.error("Failed to send message. Please try again later.");
+      } finally {
+        setIsLoading(false);
+      }
+    },
+  });
+
   return (
     <div>
       <section style={{ background: "rgba(0, 0, 0, 0.4)" }}>
@@ -58,88 +101,140 @@ const ConsultationDialog = () => {
                 </div>
                 {/* Right side: Form section */}
                 <div className="py-5 px-5 flex-1">
-                  <div className="row w-100">
-                    <div className="col-6">
-                      <div className="mb-4">
-                        <TextField
-                          id="standard-basic"
-                          label="first Name"
-                          variant="standard"
-                          className="w-100"
-                        />
+                  <form onSubmit={formik.handleSubmit}>
+                    <div className="row w-100">
+                      <div className="col-6">
+                        <div className="mb-4">
+                          <TextField
+                            id="firstname"
+                            label="First Name"
+                            variant="standard"
+                            className="w-100"
+                            {...formik.getFieldProps("firstname")}
+                            error={
+                              formik.touched.firstname &&
+                              Boolean(formik.errors.firstname)
+                            }
+                            helperText={
+                              formik.touched.firstname &&
+                              formik.errors.firstname
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div className="col-6">
+                        <div className="mb-4">
+                          <TextField
+                            id="lastname"
+                            label="Last Name"
+                            variant="standard"
+                            className="w-100"
+                            {...formik.getFieldProps("lastname")}
+                            error={
+                              formik.touched.lastname &&
+                              Boolean(formik.errors.lastname)
+                            }
+                            helperText={
+                              formik.touched.lastname && formik.errors.lastname
+                            }
+                          />
+                        </div>
                       </div>
                     </div>
-                    <div className="col-6">
-                      <div className="mb-4">
-                        <TextField
-                          id="standard-basic"
-                          label="last Name"
-                          variant="standard"
-                          className="w-100"
-                        />
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="row w-100">
-                    <div className="col-6">
-                      <div className="mb-4">
-                        <TextField
-                          id="standard-basic"
-                          label="work Email"
-                          variant="standard"
-                          className="w-100"
-                        />
+                    <div className="row w-100">
+                      <div className="col-6">
+                        <div className="mb-4">
+                          <TextField
+                            id="email"
+                            label="Work Email"
+                            variant="standard"
+                            className="w-100"
+                            {...formik.getFieldProps("email")}
+                            error={
+                              formik.touched.email &&
+                              Boolean(formik.errors.email)
+                            }
+                            helperText={
+                              formik.touched.email && formik.errors.email
+                            }
+                          />
+                        </div>
+                      </div>
+                      <div className="col-6">
+                        <div className="mb-4">
+                          <TextField
+                            id="phone"
+                            label="Phone Number"
+                            variant="standard"
+                            className="w-100"
+                            {...formik.getFieldProps("phone")}
+                            error={
+                              formik.touched.phone &&
+                              Boolean(formik.errors.phone)
+                            }
+                            helperText={
+                              formik.touched.phone && formik.errors.phone
+                            }
+                          />
+                        </div>
                       </div>
                     </div>
-                    <div className="col-6">
-                      <div className="mb-4">
-                        <TextField
-                          id="standard-basic"
-                          label="phone Number"
-                          variant="standard"
-                          className="w-100"
-                        />
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="row w-100">
-                    <div className="col-6">
-                      <div className="mb-4">
-                        <TextField
-                          id="standard-basic"
-                          label="company"
-                          variant="standard"
-                          className="w-100"
-                        />
+                    <div className="row w-100">
+                      <div className="col-6">
+                        <div className="mb-4">
+                          <TextField
+                            id="company"
+                            label="Company"
+                            variant="standard"
+                            className="w-100"
+                            {...formik.getFieldProps("company")}
+                            error={
+                              formik.touched.company &&
+                              Boolean(formik.errors.company)
+                            }
+                            helperText={
+                              formik.touched.company && formik.errors.company
+                            }
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="mb-4">
-                        <TextField
-                          id="standard-basic"
-                          label="Message"
-                          variant="standard"
-                          className="w-100"
-                        />
+                    <div className="row">
+                      <div className="col-12">
+                        <div className="mb-4">
+                          <TextField
+                            id="message"
+                            label="Message"
+                            variant="standard"
+                            className="w-100"
+                            {...formik.getFieldProps("message")}
+                            error={
+                              formik.touched.message &&
+                              Boolean(formik.errors.message)
+                            }
+                            helperText={
+                              formik.touched.message && formik.errors.message
+                            }
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="row mt-4">
-                    <div className="col-12 text-end">
-                      <button
-                        type="button"
-                        className="btn btn-dark w-25 contact-form-btn h-40 bold"
-                      >
-                        Submit
-                      </button>
+                    <div className="row mt-4">
+                      <div className="col-12 text-end">
+                        <button
+                          type="submit"
+                          className="btn btn-dark w-25 contact-form-btn h-40 bold"
+                          disabled={isLoading}
+                        >
+                          {isLoading ? "Submitting..." : "Submit"}
+                        </button>
+                      </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
