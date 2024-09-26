@@ -80,7 +80,7 @@ const Form = () => {
                     <div className="d-flex align-items-center">
                       <img src="assets/images/address.png" alt="Address" />
                       <p className="ps-4 mb-0">
-                        167-169 Great Portland Street, London
+                        3 Deneside, Great Yarmouth, England NR 30 2HL
                       </p>
                     </div>
                   </div>

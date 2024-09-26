@@ -67,7 +67,7 @@ const Hero = () => {
                           alt="list-check"
                         />
                       </span>
-                      Full Implementation
+                      Full Implementation Support
                     </p>
                   </li>
                   <li>

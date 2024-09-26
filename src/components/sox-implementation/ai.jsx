@@ -20,9 +20,6 @@ const AI = () => {
               />
             </div>
             <div className="col-lg-6">
-              <p className="fw-bold fs-4">
-                AI-Driven Implementation for Budget-Conscious Organizations
-              </p>
               <p className="fs-4 text-secondary">
                 Suitable for mid-tier organizations with some internal control
                 knowledge and limited budgets, this model leverages the power of

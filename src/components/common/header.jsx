@@ -40,7 +40,7 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/about">
-                    Who We Are
+                    Who Are We
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -50,7 +50,7 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/industries">
-                    Industries
+                    SOX Industry Hub
                   </Link>
                 </li>
               </ul>

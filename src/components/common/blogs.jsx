@@ -3,8 +3,16 @@ import parse from "html-react-parser";
 import { toast } from "react-toastify";
 import { Chip, CircularProgress } from "@mui/material";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
+
+// Utility function to strip HTML tags
+const stripHtml = (html) => {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  return doc.body.textContent || "";
+};
 
 const Blogs = () => {
+  const navigate = useNavigate();
   const [blogs, setBlogs] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
 
@@ -30,46 +38,58 @@ const Blogs = () => {
   return (
     <div>
       <section className="py-5">
-        {loading ? (
-          <div>
-            <CircularProgress />
-          </div>
-        ) : (
-          <div className="container">
-            <div className="row text-center">
-              <div className="col-12 d-flex justify-content-center">
-                <span className="blog">Blog</span>
-              </div>
-              <h1 className="mt-4 main-heading">
-                Insights & Thought Leadership
-              </h1>
-              <p className="px-lg-5 fs-20 text-secondary">
-                Stay informed with expert articles, industry updates, and
-                in-depth analysis on SOX compliance and risk management.
-              </p>
+        <div className="container">
+          {loading ? (
+            <div>
+              <CircularProgress />
             </div>
-            <div className="row mt-5 font-inter">
-              {blogs?.map((blog, ind) => (
-                <div className="col-lg-4" key={ind}>
-                  <div className="bg-white rounded">
-                    <img
-                      src="assets/images/blog-1.png"
-                      className="img-fluid w-100"
-                    />
-                    <div className="p-3">
-                      <p className="my-3 blog-date">
-                        {moment.utc(blog.updatedAt).format("MMMM Do YYYY")}
-                      </p>
-                      <Chip label={blog.category}/>
-                      <h5 className="my-3 fw-bold">{blog?.title}</h5>
-                      <p>{parse(blog?.description)}</p>
+          ) : (
+            <div>
+              <div className="row text-center">
+                <div className="col-12 d-flex justify-content-center">
+                  <span className="blog">Blog</span>
+                </div>
+                <h1 className="mt-4 main-heading">
+                  Insights & Thought Leadership
+                </h1>
+                <p className="px-lg-5 fs-20 text-secondary">
+                  Stay informed with expert articles, industry updates, and
+                  in-depth analysis on SOX compliance and risk management.
+                </p>
+              </div>
+              <div className="row mt-5 font-inter">
+                {blogs?.map((blog, ind) => (
+                  <div
+                    className="col-lg-4 pointer"
+                    key={ind}
+                    onClick={() => navigate(`/blog?id=${blog?._id}`)}
+                  >
+                    <div className="bg-white rounded">
+                      <img
+                        src="assets/images/blog-1.png"
+                        className="img-fluid w-100"
+                      />
+                      <div className="p-3">
+                        <p className="my-3 blog-date">
+                          {moment.utc(blog.updatedAt).format("MMMM Do YYYY")}
+                        </p>
+                        <Chip label={blog.category} />
+                        <h5 className="my-3 fw-bold">{blog?.title}</h5>
+
+                        {/* Handling HTML description with a maximum of 200 characters */}
+                        <p>
+                          {stripHtml(blog?.description).length > 200
+                            ? `${stripHtml(blog?.description).slice(0, 200)}...`
+                            : parse(blog?.description)}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </section>
     </div>
   );

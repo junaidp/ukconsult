@@ -13,32 +13,26 @@ const Values = () => {
           <div className="row mt-4">
             <div className="col-lg-4 mb-3">
               <h3 className="values-heading text-secondary fw-bold">
-                Transparency
+                Openness
               </h3>
               <p className="fs-5 mt-4 text-secondary">
-                We are fully honest and transparent regarding the competence and
-                experience about our Consultants and provide references,
-                certificates and proof of work backing that up.
+                We encourage: Questioning conventions. Building strategic partnerships. Fostering innovation.
               </p>
             </div>
             <div className="col-lg-4 mb-3">
               <h3 className="values-heading text-secondary fw-bold">
-                Accountability
+                Balanced
               </h3>
               <p className="fs-5 mt-4 text-secondary">
-                We feel accountable from their first day till the last how our
-                Consultants perform and whether they are able to meet the
-                expectations and impact necessary.
+                We believe in: Considering diverse viewpoints. Promoting a healthy work-life equilibrium. Understanding the client's perspective.
               </p>
             </div>
             <div className="col-lg-4 mb-3">
               <h3 className="values-heading text-secondary fw-bold">
-                Impact Driven
+                Honesty
               </h3>
               <p className="fs-5 mt-4 text-secondary">
-                We participate only on engagements where there is a clear path
-                towards a positive impact our Consultants may support and
-                contribute to.
+                For us, this means: Delivering on promises without exaggeration. Acknowledging mistakes as opportunities for growth.
               </p>
             </div>
           </div>

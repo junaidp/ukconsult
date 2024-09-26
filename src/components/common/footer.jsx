@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-4 col-md-6">
               <div>
-                <a href="#">
+                <a href="/">
                   <img
                     src="assets/images/logo-ver.png"
                     className={"logo-footer"}
@@ -30,13 +30,13 @@ const Footer = () => {
               </div>
               <ul className="mt-3">
                 <li>
-                  <a href="#">Full Implementation</a>
+                  <a>Full Implementation</a>
                 </li>
                 <li>
-                  <a href="#">Hybrid Model</a>
+                  <a>Hybrid Model</a>
                 </li>
                 <li>
-                  <a href="#">Implementation Through AI </a>
+                  <a>Implementation Through AI </a>
                 </li>
               </ul>
             </div>
@@ -46,19 +46,19 @@ const Footer = () => {
               </div>
               <ul className="mt-3">
                 <li>
-                  <a href="#">Manufacturing</a>
+                  <a>Manufacturing</a>
                 </li>
                 <li>
-                  <a href="#">Healthcare</a>
+                  <a>Healthcare</a>
                 </li>
                 <li>
-                  <a href="#">Telecom</a>
+                  <a>Telecom</a>
                 </li>
                 <li>
-                  <a href="#">Utilities</a>
+                  <a>Utilities</a>
                 </li>
                 <li>
-                  <a href="#">Technology</a>
+                  <a>Technology</a>
                 </li>
               </ul>
             </div>
@@ -68,7 +68,10 @@ const Footer = () => {
               </div>
               <ul className="mt-3">
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.linkedin.com/in/faheempiracha/"
+                    target="__blank"
+                  >
                     <img
                       src="assets/images/footer-icon/LinkedIn.png"
                       className="me-2"
@@ -79,7 +82,7 @@ const Footer = () => {
               <ul className={"address-box"}>
                 <li className={"ms-3"}>
                   <p>
-                    167-169 Great Portland Street London <br />
+                    3 Deneside, Great Yarmouth, England NR 30 2HL <br />
                   </p>
                 </li>
                 <li className={"ms-3"}>

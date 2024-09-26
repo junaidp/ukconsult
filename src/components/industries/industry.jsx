@@ -2,8 +2,15 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 import parse from "html-react-parser";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+// Utility function to strip HTML tags
+const stripHtml = (html) => {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  return doc.body.textContent || "";
+};
 
 const Industry = () => {
+  const navigate = useNavigate();
   const [currentButton, setCurrentButton] = useState("Manufacturing Industry");
   const [selectedItem, setSelectedItem] = useState({});
   const [blogs, setBlogs] = useState([]);
@@ -167,7 +174,11 @@ const Industry = () => {
                 <h1>Loading....</h1>
               ) : (
                 blogs?.map((blog, ind) => (
-                  <div className="col-lg-4" key={ind}>
+                  <div
+                    className="col-lg-4 pointer"
+                    key={ind}
+                    onClick={() => navigate(`/blog?id=${blog?._id}`)}
+                  >
                     <div className="bg-white rounded">
                       <img
                         src="assets/images/blog-1.png"
@@ -178,7 +189,9 @@ const Industry = () => {
                           {moment.utc(blog.updatedAt).format("MMMM Do YYYY")}
                         </p>
                         <h5 className="my-3 fw-bold">{blog?.title}</h5>
-                        <p>{parse(blog?.description)}</p>
+                        {stripHtml(blog?.description).length > 200
+                          ? `${stripHtml(blog?.description).slice(0, 200)}...`
+                          : parse(blog?.description)}{" "}
                       </div>
                     </div>
                   </div>

@@ -8,6 +8,7 @@ import Footer from "./components/common/footer";
 import SoxImplementation from "./pages/sox-implementation";
 import Industries from "./pages/industries";
 import Contact from "./pages/contact";
+import Blog from "./pages/blog";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/sox-implementation" element={<SoxImplementation />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -33,7 +33,7 @@ const Outputs = () => {
             </div>
             <div className="col b-2">
               <div className="output p-2 h-100">
-                GAP report with value-adding recommendations
+                Risk Control Matrixes
               </div>
             </div>
           </div>

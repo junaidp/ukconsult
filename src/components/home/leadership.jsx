@@ -35,11 +35,15 @@ const Leadership = () => {
                       governance for large corporations.
                     </p>
                     <p>
-                      <a href="#" className="read-more">
+                      <a
+                        href="https://www.linkedin.com/in/faheempiracha/"
+                        target="__blank"
+                        className="read-more"
+                      >
                         Read more
                       </a>
                     </p>
-                    <div className="">
+                    {/* <div className="">
                       <a href="#" className="read-more">
                         <svg
                           className="me-3"
@@ -89,7 +93,7 @@ const Leadership = () => {
                           />
                         </svg>
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -102,7 +106,7 @@ const Leadership = () => {
                   <div className="p-3 font-inter">
                     <h3 className="fw-bold">Leah Owens</h3>
                     <p className="text-secondary leader-title">
-                      Partner - AML & Compliance Specialist
+                      Principal Consultant Compliance
                     </p>
                     <p className="mt-4 text-secondary mb-1">
                       Leah is an accomplished expert in Anti-Money Laundering
@@ -114,11 +118,15 @@ const Leadership = () => {
                       </span>
                     </p>
                     <p>
-                      <a href="#" className="read-more">
+                      <a
+                        href="https://www.linkedin.com/in/faheempiracha/"
+                        target="__blank"
+                        className="read-more"
+                      >
                         Read more
                       </a>
                     </p>
-                    <div className="">
+                    {/* <div className="">
                       <a href="#" className="read-more">
                         <svg
                           className="me-3"
@@ -168,7 +176,7 @@ const Leadership = () => {
                           />
                         </svg>
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

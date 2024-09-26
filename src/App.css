@@ -292,6 +292,10 @@
   font-family: "Lato", sans-serif !important;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .grid-40 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
@@ -364,6 +368,41 @@
 
 .Toastify__toast {
   z-index: 1000000000000000000000000000000000 !important;
+}
+
+/* Blog.css */
+
+.blog-image {
+  width: 100%;
+}
+
+.blog-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.blog-category {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.blog-date {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+.blog-description {
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 1200px) {

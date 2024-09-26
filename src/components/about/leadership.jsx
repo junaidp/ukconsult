@@ -86,7 +86,7 @@ const Leadership = () => {
                       <div className="p-3">
                         <h4 className="fw-bold">Leah Owens</h4>
                         <p className="text-secondary leader-title">
-                          Partner - AML & Compliance Specialist
+                          Principal Consultant Compliance
                         </p>
                       </div>
                     </div>
@@ -96,34 +96,11 @@ const Leadership = () => {
                           &nbsp;
                         </p>
                         <p className="mt-4 text-secondary mb-1">
-                          Leah Owens is an accomplished expert in Anti-Money
-                          Laundering (AML) and compliance, with a strong
-                          educational background and a commitment to ongoing
-                          professional development. She holds advanced degrees
-                          in Human Rights Law and Law, along with certifications
-                          in banking, internal audit, and business risk.
+                          Leah Owens is an accomplished expert in Anti-Money Laundering (AML) and compliance, with a strong educational background and a commitment to ongoing professional development. She holds advanced degrees in Human Rights Law and Law, along with certifications in banking, internal audit, and business risk.
                           <br />
-                          Leah provides specialized compliance consulting
-                          services to fintech companies and serves as an interim
-                          Money Laundering Reporting Officer (MLRO). She is
-                          responsible for developing AML and compliance
-                          frameworks, preparing formal reports, and managing
-                          regulatory returns. Her expertise in this area has
-                          been honed through her work as an MLRO for several
-                          fintech start-ups, where she designed and implemented
-                          AML, Compliance, and Risk frameworks within a
-                          regulated environment.
+                          She has extensive experience in developing AML and compliance frameworks, preparing formal reports, and managing regulatory returns. Her expertise in this area has been honed through her work with various organizations where she designed and implemented AML, Compliance, and Risk frameworks within a regulated environment.
                           <br />
-                          Leah’s career includes extensive experience in
-                          auditing and consulting, focusing on regulatory
-                          compliance, AML, and financial crime prevention. Her
-                          roles have involved delivering high-quality audit
-                          reports, executing compliance audits, and supporting
-                          major implementation projects. Throughout her career,
-                          Leah has developed deep expertise in building and
-                          managing effective compliance frameworks,
-                          demonstrating her adaptability and dedication to the
-                          field of compliance.
+                          Leah’s career includes extensive experience in auditing and consulting, focusing on regulatory compliance, AML, and financial crime prevention. Her roles have involved delivering high-quality audit reports, executing compliance audits, and supporting major implementation projects. Throughout her career, Leah has developed deep expertise in building and managing effective compliance frameworks, demonstrating her adaptability and dedication to the field of compliance.
                         </p>
                       </div>
                     </div>
