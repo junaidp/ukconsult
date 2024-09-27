@@ -11,24 +11,22 @@ const Blog = ({ blog }) => {
   return (
     <div>
       {image && <img src={image} alt={title} className="blog-image" />}
-      <CardContent>
-        <Typography variant="h5" className="blog-title mb-20">
-          {title}
-        </Typography>
-        <div className="mt-20">
-          <Chip
-            label={category}
-            color="primary"
-            className="blog-category mb-20"
-          />
-        </div>
-        <Typography variant="body2" className="blog-date">
-          {moment(createdAt).format("MMMM Do YYYY")}
-        </Typography>
-        {description && (
-          <div className="blog-description">{parse(description)}</div>
-        )}
-      </CardContent>
+      <Typography variant="h5" className="blog-title mb-20">
+        {title}
+      </Typography>
+      <div className="mt-20">
+        <Chip
+          label={category}
+          color="primary"
+          className="blog-category mb-20"
+        />
+      </div>
+      <Typography variant="body2" className="blog-date">
+        {moment(createdAt).format("MMMM Do YYYY")}
+      </Typography>
+      {description && (
+        <div className="blog-description">{parse(description)}</div>
+      )}
     </div>
   );
 };

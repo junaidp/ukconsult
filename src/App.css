@@ -405,6 +405,20 @@
   margin-top: 20px;
 }
 
+.footer-wrap {
+  color: black;
+  padding: 0px 7%;
+}
+
+.img-rounded{
+  height: 40%;
+}
+
+.img-rounded img{
+  height: 100%;
+}
+
+
 @media screen and (max-width: 1200px) {
   .contact-form {
     flex-direction: column;

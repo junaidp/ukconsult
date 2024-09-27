@@ -489,6 +489,14 @@ button.nav-link {
   font-family: "Inter", sans-serif !important;
 }
 
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 7%;
+  align-items: center;
+}
+
 @media (max-width: 992px) {
   .custom-reverse {
     flex-direction: column-reverse;

@@ -12,7 +12,7 @@ const Header = () => {
           showSidebar={showSidebar}
         />
         <nav className="navbar navbar-expand-lg">
-          <div className="container">
+          <div className="nav-header">
             <Link className="navbar-brand" to="/">
               <img src="assets/images/Logo.svg" className="logo" />
             </Link>

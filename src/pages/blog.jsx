@@ -34,7 +34,7 @@ const Blog = () => {
   return (
     <div>
       <Header />
-      <section className="py-5">
+      <section className="py-5" style={{ background: "white" }}>
         <div className="container">
           <div className="row">
             {loading ? (

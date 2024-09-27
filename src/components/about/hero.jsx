@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="row py-5 custom-reverse">
           <div className="col-lg-6">
             <div className="text-center">
-              <img src="assets/images/header-img-2.png" className="img-fluid" />
+              <img src="assets/images/Images (2).png" className="img-fluid" />
             </div>
           </div>
           <div className="col-lg-5 header-2">

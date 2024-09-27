@@ -1,15 +1,8 @@
 import React from "react";
-import parse from "html-react-parser";
 import { toast } from "react-toastify";
 import { Chip, CircularProgress } from "@mui/material";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
-
-// Utility function to strip HTML tags
-const stripHtml = (html) => {
-  const doc = new DOMParser().parseFromString(html, "text/html");
-  return doc.body.textContent || "";
-};
 
 const Blogs = () => {
   const navigate = useNavigate();
@@ -64,24 +57,14 @@ const Blogs = () => {
                     key={ind}
                     onClick={() => navigate(`/blog?id=${blog?._id}`)}
                   >
-                    <div className="bg-white rounded">
-                      <img
-                        src="assets/images/blog-1.png"
-                        className="img-fluid w-100"
-                      />
+                    <div className="bg-white img-rounded">
+                      <img src={blog?.image} className="img-fluid w-100" />
                       <div className="p-3">
                         <p className="my-3 blog-date">
                           {moment.utc(blog.updatedAt).format("MMMM Do YYYY")}
                         </p>
                         <Chip label={blog.category} />
                         <h5 className="my-3 fw-bold">{blog?.title}</h5>
-
-                        {/* Handling HTML description with a maximum of 200 characters */}
-                        <p>
-                          {stripHtml(blog?.description).length > 200
-                            ? `${stripHtml(blog?.description).slice(0, 200)}...`
-                            : parse(blog?.description)}
-                        </p>
                       </div>
                     </div>
                   </div>

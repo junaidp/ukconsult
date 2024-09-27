@@ -172,6 +172,8 @@ const Industry = () => {
             <div className="row mt-5">
               {loading ? (
                 <h1>Loading....</h1>
+              ) : blogs?.length === 0 ? (
+                <h1>No Blogs To Show In This Category</h1>
               ) : (
                 blogs?.map((blog, ind) => (
                   <div
@@ -179,11 +181,8 @@ const Industry = () => {
                     key={ind}
                     onClick={() => navigate(`/blog?id=${blog?._id}`)}
                   >
-                    <div className="bg-white rounded">
-                      <img
-                        src="assets/images/blog-1.png"
-                        className="img-fluid w-100"
-                      />
+                    <div className="bg-white img-rounded">
+                      <img src={blog?.image} className="img-fluid w-100" />
                       <div className="p-3">
                         <p className="my-3 blog-date">
                           {moment.utc(blog.updatedAt).format("MMMM Do YYYY")}
