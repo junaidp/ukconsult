@@ -19,7 +19,7 @@ const Leadership = () => {
               <div className="col-lg-5">
                 <div className="border leader-card">
                   <img
-                    src="assets/images/leader-1.png"
+                    src="assets/images/faheempiracha.png"
                     className="img-fluid w-100"
                   />
                   <div className="p-3 font-inter">
@@ -100,7 +100,7 @@ const Leadership = () => {
               <div className="col-lg-5">
                 <div className="border leader-card">
                   <img
-                    src="assets/images/leader-2.png"
+                    src="assets/images/leahowens.png"
                     className="img-fluid w-100"
                   />
                   <div className="p-3 font-inter">
@@ -113,9 +113,6 @@ const Leadership = () => {
                       and compliance, with extensive experience in developing
                       and managing AML frameworks for fintech companies and
                       ensuring regulatory compliance across various sectors.
-                      <span className="hidden">
-                        ensuring regulatory compliance across various.
-                      </span>
                     </p>
                     <p>
                       <a
@@ -177,6 +174,35 @@ const Leadership = () => {
                         </svg>
                       </a>
                     </div> */}
+                  </div>
+                </div>
+              </div>
+            <div className="col-lg-5">
+                <div className="border leader-card">
+                  <img
+                    src="assets/images/omerahmed.png"
+                    className="img-fluid w-100"
+                  />
+                  <div className="p-3 font-inter">
+                    <h3 className="fw-bold">Omer Ahmed</h3>
+                    <p className="text-secondary leader-title">
+                      UK Advisory Partner
+                    </p>
+                    <p className="mt-4 text-secondary mb-1">
+                      Omer brings a wealth of technical expertise in digital
+                      transformation and technology strategy, with a focus on
+                      driving innovation and ensuring scalable solutions
+                      tailored to client needs in diverse industries.
+                    </p>
+                    <p>
+                      <a
+                        href="https://www.linkedin.com/in/omar-ahmed-2bb59611b/"
+                        target="__blank"
+                        className="read-more"
+                      >
+                        Read more
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>

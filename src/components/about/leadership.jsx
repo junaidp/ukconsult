@@ -20,7 +20,7 @@ const Leadership = () => {
                   <div className="row">
                     <div className="col-md-5">
                       <img
-                        src="assets/images/leader-1.png"
+                        src="assets/images/faheempiracha.png"
                         className="img-fluid w-100"
                       />
                       <div className="p-3">
@@ -80,7 +80,7 @@ const Leadership = () => {
                   <div className="row">
                     <div className="col-md-5">
                       <img
-                        src="assets/images/leader-2.png"
+                        src="assets/images/leahowens.png"
                         className="img-fluid w-100"
                       />
                       <div className="p-3">
@@ -101,6 +101,38 @@ const Leadership = () => {
                           She has extensive experience in developing AML and compliance frameworks, preparing formal reports, and managing regulatory returns. Her expertise in this area has been honed through her work with various organizations where she designed and implemented AML, Compliance, and Risk frameworks within a regulated environment.
                           <br />
                           Leah’s career includes extensive experience in auditing and consulting, focusing on regulatory compliance, AML, and financial crime prevention. Her roles have involved delivering high-quality audit reports, executing compliance audits, and supporting major implementation projects. Throughout her career, Leah has developed deep expertise in building and managing effective compliance frameworks, demonstrating her adaptability and dedication to the field of compliance.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<div className="col-lg-12 mb-3">
+                <div className="border bg-white">
+                  <div className="row">
+                    <div className="col-md-5">
+                      <img
+                        src="assets/images/omerahmed.png"
+                        className="img-fluid w-100"
+                      />
+                      <div className="p-3">
+                        <h4 className="fw-bold">Omar Ahmed</h4>
+                        <p className="text-secondary leader-title">
+                          UK Advisory Partner
+                        </p>
+                      </div>
+                    </div>
+                    <div className="col-md-7">
+                      <div className="p-3">
+                        <p className="m-0 text-secondary leader-title">
+                          &nbsp;
+                        </p>
+                        <p className="mt-4 text-secondary mb-1">
+                          With over 15 years of comprehensive experience in risk management, governance, and compliance across the UK, Middle East, and Europe, Omar Ahmed is a highly regarded professional in the field. A Fellow Member of the Institute of Chartered Accountants of England and Wales, Omar has excelled in senior roles with leading global organizations, including FTSE 100, FTSE 250, and Fortune 500 companies, specializing in enhancing governance frameworks, internal controls, and SOX compliance programs.
+                          <br />
+                          Omar has spearheaded several high-impact initiatives, including a transformative Internal Controls Enhancement Programme, the implementation of ITGCs, and end-to-end SOX compliance projects for major corporations. He has also been instrumental in implementing robust governance structures for UK PLCs, ensuring alignment with the UK Corporate Governance Code.
+                          <br />
+                          A trusted advisor to C-suites and Audit Committees, Omar has delivered risk management training and policy development that drive operational excellence. Recognized for his expertise in governance and control frameworks, Omar empowers organizations to meet evolving regulatory demands and strengthen their operational resilience.
                         </p>
                       </div>
                     </div>
