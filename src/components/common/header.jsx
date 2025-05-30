@@ -53,6 +53,11 @@ const Header = () => {
                     SOX Industry Hub
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/webinars">
+                    Webinars
+                  </Link>
+                </li>
               </ul>
               <Link to="/contact">
                 <button className="btn btn-primary">Contact Us</button>

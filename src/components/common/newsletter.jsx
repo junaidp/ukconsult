@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-const Newsletter = ({ newsletter, setOpen, industryPage }) => {
+const Newsletter = ({ newsletter, setOpen, industryPage, webinar }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
 
@@ -128,6 +128,55 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
           </div>
         </section>
       )}
+      {webinar && (
+        <section className="py-4 section-email">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-7">
+                <div className="d-flex align-items-center">
+                  <img
+                    src="assets/images/email.png"
+                    className="img-fluid"
+                    alt=""
+                  />
+                  <h2 className="text-white fw-bold m-0 ms-3">
+                    Subscribe to receive notifications about upcoming webinars on internal controls, SOX compliance, and more.
+                  </h2>
+                </div>
+              </div>
+              <div className="col-lg-5 newsletter-form">
+                <Formik
+                  initialValues={initialValues}
+                  validationSchema={validationSchema}
+                  onSubmit={handleSubmit}
+                >
+                  {({ isSubmitting }) => (
+                    <Form className="d-flex gap-2">
+                      <div className="me-3 w-75">
+                        <Field
+                          type="email"
+                          name="email"
+                          placeholder="name@example.com"
+                          className="form-control"
+                          onChange={(event) => setEmail(event.target.value)}
+                          value={email}
+                        />
+                      </div>
+                      <button
+                        className="btn btn-white px-4 lato"
+                        onClick={handleSaveEmail}
+                        disabled={isLoading || isSubmitting}
+                      >
+                        {isLoading ? "Loading..." : "Subscribe"}
+                      </button>
+                    </Form>
+                  )}
+                </Formik>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {newsletter && (
         <section className="bg-light py-5">
@@ -161,102 +210,105 @@ const Newsletter = ({ newsletter, setOpen, industryPage }) => {
         </section>
       )}
 
-      <section className="py-5">
-        <div className="container">
-          <div className="row gap-95">
-            <div className="col-lg-5">
-              <h4 className="border-left-theme ps-3 fw-bold">
-                Reach out to us
-              </h4>
-              <h1 className="main-heading my-4">
-                Contact Us Today For A Free Consultation
-              </h1>
-              <p className="text-secondary mt-4 fs-20">
-                Our team of experts is here to guide you through every step of
-                your SOX compliance journey. Reach out to us for a no-obligation
-                consultation and see how we can help your business achieve
-                compliance efficiently and effectively.
-              </p>
-            </div>
-            <div className="col-lg-6">
-              <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={handleSubmit}
-              >
-                {({ isSubmitting }) => (
-                  <Form className="border rounded p-3">
-                    <div className="mb-3">
-                      <label htmlFor="Name" className="form-label">
-                        Name
-                      </label>
-                      <Field type="text" name="name" className="form-control" />
-                      <ErrorMessage
-                        name="name"
-                        component="div"
-                        className="error"
-                      />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="Phone" className="form-label">
-                        Phone
-                      </label>
-                      <Field
-                        type="text"
-                        name="phone"
-                        className="form-control"
-                      />
-                      <ErrorMessage
-                        name="phone"
-                        component="div"
-                        className="error"
-                      />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="Email" className="form-label">
-                        Email address
-                      </label>
-                      <Field
-                        type="email"
-                        name="email"
-                        className="form-control"
-                      />
-                      <ErrorMessage
-                        name="email"
-                        component="div"
-                        className="error"
-                      />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="Message" className="form-label">
-                        Message
-                      </label>
-                      <Field
-                        as="textarea"
-                        name="message"
-                        rows="3"
-                        className="form-control"
-                      />
-                      <ErrorMessage
-                        name="message"
-                        component="div"
-                        className="error"
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      className="btn btn-dark w-100"
-                      disabled={isLoading || isSubmitting}
-                    >
-                      {isLoading ? "Loading..." : "Submit"}
-                    </button>
-                  </Form>
-                )}
-              </Formik>
+      {
+        !webinar &&
+        <section className="py-5">
+          <div className="container">
+            <div className="row gap-95">
+              <div className="col-lg-5">
+                <h4 className="border-left-theme ps-3 fw-bold">
+                  Reach out to us
+                </h4>
+                <h1 className="main-heading my-4">
+                  Contact Us Today For A Free Consultation
+                </h1>
+                <p className="text-secondary mt-4 fs-20">
+                  Our team of experts is here to guide you through every step of
+                  your SOX compliance journey. Reach out to us for a no-obligation
+                  consultation and see how we can help your business achieve
+                  compliance efficiently and effectively.
+                </p>
+              </div>
+              <div className="col-lg-6">
+                <Formik
+                  initialValues={initialValues}
+                  validationSchema={validationSchema}
+                  onSubmit={handleSubmit}
+                >
+                  {({ isSubmitting }) => (
+                    <Form className="border rounded p-3">
+                      <div className="mb-3">
+                        <label htmlFor="Name" className="form-label">
+                          Name
+                        </label>
+                        <Field type="text" name="name" className="form-control" />
+                        <ErrorMessage
+                          name="name"
+                          component="div"
+                          className="error"
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="Phone" className="form-label">
+                          Phone
+                        </label>
+                        <Field
+                          type="text"
+                          name="phone"
+                          className="form-control"
+                        />
+                        <ErrorMessage
+                          name="phone"
+                          component="div"
+                          className="error"
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="Email" className="form-label">
+                          Email address
+                        </label>
+                        <Field
+                          type="email"
+                          name="email"
+                          className="form-control"
+                        />
+                        <ErrorMessage
+                          name="email"
+                          component="div"
+                          className="error"
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="Message" className="form-label">
+                          Message
+                        </label>
+                        <Field
+                          as="textarea"
+                          name="message"
+                          rows="3"
+                          className="form-control"
+                        />
+                        <ErrorMessage
+                          name="message"
+                          component="div"
+                          className="error"
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        className="btn btn-dark w-100"
+                        disabled={isLoading || isSubmitting}
+                      >
+                        {isLoading ? "Loading..." : "Submit"}
+                      </button>
+                    </Form>
+                  )}
+                </Formik>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      }
     </div>
   );
 };

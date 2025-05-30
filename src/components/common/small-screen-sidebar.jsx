@@ -49,6 +49,15 @@ const SideBar = ({ showSidebar, setShowSidebar }) => {
               Industries
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              className="nav-link"
+              to="/webinars"
+              onClick={() => setShowSidebar(false)}
+            >
+              Webinars
+            </Link>
+          </li>
         </ul>
         <Link to="/contact" onClick={() => setShowSidebar(false)}>
           <button className="btn btn-primary">Contact Us</button>
