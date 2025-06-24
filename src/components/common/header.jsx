@@ -58,6 +58,11 @@ const Header = () => {
                     Webinars
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/procurement">
+                    Procurement
+                  </Link>
+                </li>
               </ul>
               <Link to="/contact">
                 <button className="btn btn-primary">Contact Us</button>

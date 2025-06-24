@@ -3,10 +3,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { toast } from "react-toastify";
+import WebinarDialog from "./webinar-dialog";
 
 const Hero = () => {
     const [isLoading, setIsLoading] = React.useState(false);
-
     const formik = useFormik({
         initialValues: {
             name: "",
@@ -26,7 +26,7 @@ const Hero = () => {
             if (isLoading) return;
             setIsLoading(true);
             try {
-                await axios.post("https://hyphen-back.vercel.app/api/v1/consultation", values);
+                await axios.post("https://hyphen-back.vercel.app/api/v1/webinarUser", values);
                 toast.success(
                     "Thank you for expressing interest in our product! We’re thrilled to provide you with a personalised demo. Our team will be in touch shortly to schedule a demonstration tailored to your needs. Stay tuned"
                 );
@@ -41,6 +41,7 @@ const Hero = () => {
 
     return (
         <div>
+           
             <section className="py-5 pb-0 bg-light sox-header">
                 <div className="container">
                     <div className="sox-hero">

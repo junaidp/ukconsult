@@ -480,6 +480,14 @@ button.nav-link {
   top: -90px;
   border-radius: 10px;
 }
+.model-wrap-webinar {
+  width: 70%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  top: -90px;
+  border-radius: 10px;
+}
 
 .d-flex {
   display: flex;

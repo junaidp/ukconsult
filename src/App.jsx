@@ -10,6 +10,7 @@ import Industries from "./pages/industries";
 import Contact from "./pages/contact";
 import Blog from "./pages/blog";
 import Webinar from "./pages/webinar"
+import Procurement from "./pages/procurement";
 import ExitIntentModal from "./components/ExitIntentModal"; // Add this import
 
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/webinars" element={<Webinar />} />
+          <Route path="/procurement" element={<Procurement />} />
         </Routes>
         <Footer />
         <ExitIntentModal /> {/* Add this line just before closing BrowserRouter */}

@@ -1,0 +1,151 @@
+/* --- Import Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+/* --- General Page Styles --- */
+.procurement-page {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f0f0; /* Light gray for area below the hero */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative; /* Needed for the white curve */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 60px 40px;
+  background-color: #e85a25; /* The main orange color */
+  overflow: hidden; /* Clips the curve */
+}
+
+/* This creates the giant white curve in the bottom-right */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -25vw;
+  right: -25vw;
+  width: 50vw;
+  height: 50vw;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  position: relative; /* Ensures content is above the curve */
+  z-index: 1;
+}
+
+/* --- Left Column: Content --- */
+.hero-content {
+  flex: 1.2; /* Give slightly more space to the content */
+  color: white;
+}
+
+.hero-content .main-title {
+  font-size: 4.5rem; /* Adjusted for longer title */
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0;
+  color: white;
+}
+
+.hero-content .subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 25px 0;
+  opacity: 0.95;
+  line-height: 1.6;
+  color: white;
+}
+
+.hero-content .description {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 550px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #00c6a7; /* Teal color */
+  color: white;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #00a58e;
+  transform: translateY(-3px);
+}
+
+/* --- Right Column: Image --- */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  max-width: 100%;
+  max-height: 75vh; /* Prevents the tall SVG from overpowering the screen */
+  height: auto;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+/* --- Responsive Design --- */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    order: 2; /* Content below image */
+  }
+  .hero-image-container {
+    order: 1; /* Image on top */
+    margin-bottom: 40px;
+  }
+  .hero-image {
+    max-width: 50%;
+    max-height: 40vh;
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 80px 20px 40px 20px;
+    min-height: auto;
+  }
+  .hero-content .main-title {
+    font-size: 2.5rem;
+  }
+  .hero-content .subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-image {
+    max-width: 70%;
+  }
+   .hero-section::after {
+    bottom: -35vw;
+    right: -45vw;
+    width: 80vw;
+    height: 80vw;
+  }
+}
